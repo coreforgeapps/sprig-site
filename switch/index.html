@@ -34,14 +34,25 @@
     </a>
     <div class="topbar-right">
       <nav class="nav" aria-label="Primary">
-        <a href="/#compare">Pricing</a>
-        <a href="/switch" aria-current="page">Switch &amp; Save</a>
+        <a href="/">Home</a>
+        <a href="/switch" aria-current="page">Switch</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
       </nav>
       <a class="btn primary btn-nav" href="/#gallery">Download on the App Store</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
-
+<div class="nav-panel" id="nav-panel">
+  <a href="/">Home</a>
+  <a href="/switch" aria-current="page">Switch</a>
+  <a href="/faq">FAQ</a>
+  <a href="/contact">Contact</a>
+  <a class="btn primary" href="/#gallery">Download on the App Store</a>
+</div>
 <div class="hero-band">
   <div class="wrap">
 <section class="hero-center">
@@ -139,5 +150,6 @@
   <a href="/contact">Contact</a>
   <span>© 2026 CoreForge</span>
 </footer>
+<script src="/js/nav.js"></script>
 </body>
 </html>
