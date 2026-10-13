@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<title>Data Retention and Disposal Policy | Sprig</title>
+<meta name="description" content="Sprig data retention and disposal policy." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="23" fill="#1E7A50"/><g fill="#fff"><path d="M48.6 70 L51.4 70 L50.6 85 L49.4 85 Z"/><path d="M50 16 C69 25 77 44 50 72 C23 44 31 25 50 16 Z"/></g><path d="M49.4 26 L50.6 26 L50.3 68 L49.7 68 Z" fill="#1E7A50"/></svg>
+      Sprig
+    </a>
+    <div class="topbar-right">
+      <nav class="nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/switch">Switch</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <a class="btn primary btn-nav" href="/#gallery">Download on the App Store</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav-panel" id="nav-panel">
+  <a href="/">Home</a>
+  <a href="/switch">Switch</a>
+  <a href="/faq">FAQ</a>
+  <a href="/contact">Contact</a>
+  <a class="btn primary" href="/#gallery">Download on the App Store</a>
+</div>
+<main class="wrap prose" id="main">
+<h1>Data Retention and Disposal Policy</h1>
+    <p class="updated">Effective date: July 24, 2026  ·  Last updated: October 4, 2026</p>
+
+    <p>This policy describes how long Sprig ("we," "us," or "our"), operated by CoreForge LLC, retains information in connection with the Sprig application, and how that information is disposed of. It supplements our <a href="/privacy">Privacy Policy</a>, which governs our overall handling of information.</p>
+
+    <h2>1. Design principle</h2>
+    <p>Sprig is built so that almost nothing needs to be retained or deleted on our end in the first place. Financial data (transactions, balances, and investment holdings) is retrieved from your financial institution through Plaid and delivered directly to your device. It is never written to a database or disk on any server we operate, so there is no financial data at rest on our systems to retain or dispose of. Copies of your data are kept on your own device and in your own iCloud account. Those copies are yours, they sit under your own Apple Account rather than ours, and only you can remove them. Section 4 explains how.</p>
+
+    <h2>2. What we retain, and for how long</h2>
+    <table>
+      <tr>
+        <th>Data</th>
+        <th>Where it lives</th>
+        <th>Retention period</th>
+      </tr>
+      <tr>
+        <td>Bank connection credential (Plaid access token)</td>
+        <td>Your Keychain, synced between your own devices by iCloud Keychain (end-to-end encrypted by Apple). It is handed to your device when you link the institution, and your device sends it with each request. We do not store it on our servers in any form, encrypted or otherwise</td>
+        <td>Until you disconnect the institution or delete the app</td>
+      </tr>
+      <tr>
+        <td>Connection identifier (the Plaid item ID for a linked institution)</td>
+        <td>Our backend, inside short-lived operational records: a note of when your bank last responded, and a log of when Plaid last contacted us about that connection</td>
+        <td>Expires automatically, at most 30 days, and is deleted when you disconnect the institution</td>
+      </tr>
+      <tr>
+        <td>Notification address, if you turn on notifications</td>
+        <td>Our backend. Used only to send your device a content-free signal to check for updates. It cannot be used to read or access anything</td>
+        <td>Until you disconnect the institution or turn off notifications, and in any case it expires after 90 days unless your device refreshes it</td>
+      </tr>
+      <tr>
+        <td>Institution-wide service status (whether a bank is having a known outage)</td>
+        <td>Our backend, cached briefly and shared across everyone using Sprig. It describes the bank, not you</td>
+        <td>30 minutes</td>
+      </tr>
+      <tr>
+        <td>Anonymous device identifier</td>
+        <td>Your device, in the iOS Keychain. It is sent with each request so our host can apply basic rate limiting, and is not stored on our backend. It is not tied to your identity, your bank, or any data</td>
+        <td>Stays in your device's Keychain, which can outlive the app itself. Removed when you erase the device or reset its Keychain</td>
+      </tr>
+      <tr>
+        <td>Subscription identifier and Plaid user ID (subscribers)</td>
+        <td>Our backend. A one-way hash of your Apple subscription number, whether the subscription is active, and an opaque Plaid user ID used to group and release your bank connections</td>
+        <!-- UNSURE: retention period after a subscription ends is not confirmed in the worker code; confirm before publishing. -->
+        <td>While your subscription is active and until your bank connections have been released with Plaid after it ends</td>
+      </tr>
+      <tr>
+        <td>Transactions, balances, holdings, and any manual entries or customizations</td>
+        <td>Your device and your own iCloud account. Never on any server we operate</td>
+        <td>Until you remove it yourself, see Section 4</td>
+      </tr>
+    </table>
+    <p>We do not retain transaction history, account balances, or investment holdings on any server at any point. That data passes through our backend relay only for the length of a single request needed to deliver it to your device.</p>
+
+    <h2>3. Disposal triggers</h2>
+    <p>Your notification address is deleted from our systems immediately when any of the following occurs. The short-lived operational records described above are not rewritten after a disconnect, and expire on their own within 30 days at the latest.</p>
+    <ul>
+      <li>You disconnect a linked financial institution from within the app</li>
+      <li>You delete your account or data from within the app</li>
+      <li>A connection is no longer valid and is not reauthorized</li>
+    </ul>
+    <p>Disconnecting or deleting also instructs Plaid to release that connection on their end, which stops any further access to that account through Sprig.</p>
+
+    <h2>4. Your own copies, and how to remove them</h2>
+    <p>The data that makes up your actual financial picture in Sprig, including transaction history, balances, holdings, and any notes or edits you have made, is kept on your device and in your own iCloud account. Both belong to you, and neither is on a server we operate.</p>
+    <p><strong>Deleting the app does not delete everything.</strong> It removes the copy on your device. It does not remove the copy in your own iCloud account. To remove all of your Sprig data, delete the app from your device, then open Settings, tap your name, tap iCloud, then Manage Account Storage, find Sprig in the list, and delete its data there.</p>
+
+    <h2>5. Compromise response</h2>
+    <p>Because we do not hold your bank connection credential, a breach of our systems would not expose it. If we ever suspect that a connection credential has been compromised, our incident response process requires immediate invalidation of the affected Plaid access token and rotation of our Plaid client secret. This bounds how long any exposure could last, independent of when it is discovered.</p>
+
+    <h2>6. Review</h2>
+    <p>We review this policy whenever our data handling practices change, and at minimum once a year, as part of our information security program.</p>
+
+    <h2>7. Contact</h2>
+    <p>Questions about this policy can be directed to us through our <a href="/contact">contact page</a>, or by mail:</p>
+    <p>
+      CoreForge LLC<br>
+      30 N Gould St #N<br>
+      Sheridan, WY 82801
+    </p>
+</main>
+<footer class="site-footer">
+  <a href="/">Home</a>
+  <a href="/privacy">Privacy</a>
+  <a href="/terms">Terms</a>
+  <a href="/data-retention">Data Retention</a>
+  <a href="/contact">Contact</a>
+  <span>© 2026 CoreForge</span>
+</footer>
+<script src="/js/nav.js"></script>
+</body>
+</html>

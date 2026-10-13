@@ -9,7 +9,7 @@
 <meta name="description" content="Every bank, card and investment account in one clear view, with a running balance after every transaction. We don't keep your financial transactions on our servers. iPhone, iPad, Mac." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
@@ -42,201 +42,122 @@
   <a href="/contact">Contact</a>
   <a class="btn primary" href="#gallery">Download on the App Store</a>
 </div>
-<div class="hero-shell">
-  <div class="wrap">
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>Every account.<br>One clear view.<br><span class="grad-text">Private by design.</span></h1>
-        <p class="lead">Banks, cards, investments and property together, with net worth up top and a running balance after every transaction.</p>
-        <div class="hero-actions">
-          <a class="btn primary" id="cta-link" href="#gallery">See Sprig in action</a>
-          <a class="btn ghost" href="/switch">Save on your first year</a>
-        </div>
-        <p class="hero-meta"><b>$49.99 your first year</b> for a limited time, then $79.99/year. No ads. We don't sell your data.
-          <span class="plat">iPhone, iPad, Mac · Web (coming soon)</span>
-        </p>
-      </div>
-      <div class="stage" aria-hidden="true">
-        <div class="stage-glow"></div>
-        <div class="device tablet"><img src="/screenshots/ipad/1.png" alt="" width="820" height="615" loading="eager"></div>
-        <div class="device phone"><img src="/screenshots/iphone/1.png" alt="" width="390" height="844" loading="eager"></div>
-      </div>
-    </section>
 
-    <div class="trust-row">
-      <div>
-        <strong>Not on our servers</strong>
-        <p>We don't keep your financial transactions on our servers. They're stored on your Apple devices and in your own iCloud.</p>
-      </div>
-      <div>
-        <strong>No ads. No data selling.</strong>
-        <p>$49.99 your first year, then $79.99/year.</p>
-      </div>
-      <div>
-        <strong>Read-only bank connections</strong>
-        <p>Bank links are read-only. No one can move your money through Sprig.</p>
-      </div>
+<section class="hero-bleed" aria-label="Sprig">
+  <div class="hero-bleed-copy wrap">
+    <h1 class="hero-name">Sprig</h1>
+    <p class="hero-line">Every account. One clear view.</p>
+    <p class="lead">Banks, cards, investments and property together — with net worth up top and a running balance after every transaction.</p>
+    <div class="hero-actions">
+      <a class="btn primary" id="cta-link" href="#gallery">See Sprig in action</a>
+      <a class="btn ghost" href="/switch">Switching from another app?</a>
     </div>
+    <p class="hero-meta">No ads. We don’t sell your data. Transactions stay on your Apple devices.
+      <span class="plat">iPhone, iPad, Mac · Web (coming soon)</span>
+    </p>
   </div>
-</div>
+  <div class="hero-bleed-visual" aria-hidden="true">
+    <img src="/screenshots/iphone/1.png" alt="" width="390" height="844" loading="eager">
+  </div>
+</section>
 
 <main id="main">
-  <!-- 1 Accounts -->
-  <section class="band" id="accounts">
-    <div class="wrap band-grid">
-      <div class="band-copy reveal">
-        <h2>All your accounts. Net worth on top.</h2>
-        <p class="lead">Checking, savings, cards, investments and property side by side, so you see the whole picture without jumping apps.</p>
+  <section class="spotlight" id="accounts">
+    <div class="wrap">
+      <div class="spotlight-copy reveal">
+        <p class="chapter-kicker">Accounts</p>
+        <h2>Net worth on top. Everything underneath.</h2>
+        <p class="lead">Checking, savings, cards, investments and property side by side — the whole picture without jumping apps.</p>
       </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="visual-frame phone-lg"><img src="/screenshots/iphone/1.png" alt="Sprig accounts and net worth on iPhone" width="390" height="844" loading="lazy"></div>
+    </div>
+    <div class="spotlight-frame reveal">
+      <img src="/screenshots/ipad/1.png" alt="Sprig accounts and net worth on iPad" width="820" height="615" loading="lazy">
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="wrap chapter-grid flip">
+      <div class="chapter-copy reveal">
+        <p class="chapter-kicker">Balance</p>
+        <h2>A running balance after every transaction.</h2>
+        <p class="lead">The way a register works. Clean merchant names. No guesswork about what you actually have.</p>
+      </div>
+      <div class="chapter-visual reveal">
+        <img class="shot phone" src="/screenshots/iphone/2.png" alt="Sprig running balance on iPhone" width="390" height="844" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- 2 Balance -->
-  <section class="band">
-    <div class="wrap band-grid reverse">
-      <div class="band-copy reveal">
-        <h2>A balance you can trust.</h2>
-        <p class="lead">A running balance after every transaction, the way a register works. Clean merchant names. No guesswork.</p>
-      </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="panel-art">
-          <svg class="chart" viewBox="0 0 400 220" role="img" aria-label="Illustration of a rising balance chart">
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#3ddc84" stop-opacity=".45"/>
-                <stop offset="100%" stop-color="#3ddc84" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <rect width="400" height="220" rx="16" fill="#0b1310"/>
-            <path d="M24 170 C70 160,90 145,120 138 C160 128,180 150,220 120 C260 90,290 100,320 70 C340 55,360 50,376 42 L376 200 L24 200 Z" fill="url(#g1)"/>
-            <path d="M24 170 C70 160,90 145,120 138 C160 128,180 150,220 120 C260 90,290 100,320 70 C340 55,360 50,376 42" fill="none" stroke="#3ddc84" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="376" cy="42" r="5" fill="#a7f3d0"/>
-            <text x="28" y="36" fill="#93a49b" font-size="12" font-family="Inter,sans-serif">Balance</text>
-            <text x="28" y="62" fill="#f5faf7" font-size="28" font-weight="700" font-family="Inter,sans-serif">$12,480.22</text>
-          </svg>
-          <div class="stat-row">
-            <div class="stat"><b>+$840</b><span>This week</span></div>
-            <div class="stat"><b>48</b><span>Matched</span></div>
-            <div class="stat"><b>0</b><span>Duplicates</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3 Record / match -->
-  <section class="band">
-    <div class="wrap band-grid">
-      <div class="band-copy reveal">
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-copy reveal">
+        <p class="chapter-kicker">Match</p>
         <h2>Log it now. Match it later.</h2>
         <p class="lead">Record a purchase as you make it. When the bank posts, Sprig matches the two so nothing is counted twice.</p>
       </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="visual-frame phone-lg"><img src="/screenshots/iphone/5.png" alt="Sprig transaction matching on iPhone" width="390" height="844" loading="lazy"></div>
+      <div class="chapter-visual reveal">
+        <img class="shot phone" src="/screenshots/iphone/5.png" alt="Sprig transaction matching on iPhone" width="390" height="844" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- 4 Safe to spend -->
-  <section class="band">
-    <div class="wrap band-grid reverse">
-      <div class="band-copy reveal">
-        <h2>Know what's safe to spend.</h2>
-        <p class="lead">One number for today, plus a heads-up before an account runs low.</p>
+  <section class="spotlight alt">
+    <div class="wrap">
+      <div class="spotlight-copy reveal">
+        <p class="chapter-kicker">Safe to spend</p>
+        <h2>One number for today.</h2>
+        <p class="lead">What’s safe to spend now, plus a heads-up before an account runs low. Bills and paychecks show up before they hit.</p>
       </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="panel-art">
-          <div style="color:var(--mute);font-size:13px;margin-bottom:6px">Available today</div>
-          <div style="font-size:48px;font-weight:800;letter-spacing:-.05em;line-height:1">$642</div>
-          <p style="color:var(--mute);margin-top:8px;font-size:14px">After bills landing this week</p>
-          <svg class="chart" viewBox="0 0 360 90" style="margin-top:18px" aria-hidden="true">
-            <rect x="0" y="28" width="360" height="18" rx="9" fill="#1a2822"/>
-            <rect x="0" y="28" width="220" height="18" rx="9" fill="url(#bar)"/>
-            <defs><linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1f9a5a"/><stop offset="100%" stop-color="#3ddc84"/></linearGradient></defs>
-            <text x="0" y="70" fill="#93a49b" font-size="12" font-family="Inter,sans-serif">Available before payday</text>
-          </svg>
-        </div>
-      </div>
+    </div>
+    <div class="spotlight-pair reveal">
+      <img src="/screenshots/iphone/4.png" alt="Sprig Safe to Spend on iPhone" width="390" height="844" loading="lazy">
+      <img src="/screenshots/iphone/6.png" alt="Sprig scheduled transactions on iPhone" width="390" height="844" loading="lazy">
     </div>
   </section>
 
-  <!-- 5 Scheduled -->
-  <section class="band">
-    <div class="wrap band-grid">
-      <div class="band-copy reveal">
-        <h2>Bills and paychecks, on the calendar.</h2>
-        <p class="lead">Scheduled transactions laid out before they hit, so you see what's coming.</p>
-      </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="visual-frame phone-lg"><img src="/screenshots/iphone/6.png" alt="Sprig scheduled transactions on iPhone" width="390" height="844" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6 Budgets -->
-  <section class="band">
-    <div class="wrap band-grid reverse">
-      <div class="band-copy reveal">
-        <h2>Budgets that show what's left.</h2>
+  <section class="chapter">
+    <div class="wrap chapter-grid flip">
+      <div class="chapter-copy reveal">
+        <p class="chapter-kicker">Budgets</p>
+        <h2>Budgets that show what’s left.</h2>
         <p class="lead">Plan by group and category. Track spending, income and cash flow as the month moves.</p>
       </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="visual-frame"><img src="/screenshots/ipad/3.png" alt="Sprig budgets on iPad" width="820" height="615" loading="lazy"></div>
+      <div class="chapter-visual reveal">
+        <img class="shot bleed" src="/screenshots/ipad/3.png" alt="Sprig budgets on iPad" width="820" height="615" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- 7 Investments -->
-  <section class="band">
-    <div class="wrap band-grid">
-      <div class="band-copy reveal">
+  <section class="chapter">
+    <div class="wrap chapter-grid">
+      <div class="chapter-copy reveal">
+        <p class="chapter-kicker">Portfolio</p>
         <h2>Your portfolio next to cash.</h2>
         <p class="lead">Brokerage holdings beside everyday accounts. One financial picture.</p>
       </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="visual-frame phone-lg"><img src="/screenshots/iphone/8.png" alt="Sprig investment portfolio on iPhone" width="390" height="844" loading="lazy"></div>
+      <div class="chapter-visual reveal">
+        <img class="shot phone" src="/screenshots/iphone/8.png" alt="Sprig investment portfolio on iPhone" width="390" height="844" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- 8 Security -->
-  <section class="band" id="security">
-    <div class="wrap band-grid reverse">
-      <div class="band-copy reveal">
+  <section class="privacy-band" id="security">
+    <div class="wrap privacy-grid reveal">
+      <div>
+        <p class="chapter-kicker">Privacy</p>
         <h2>Private by design.</h2>
-        <p class="lead">We don't keep your financial transactions on our servers. They're stored on your Apple devices and in your own iCloud. Optional Face ID lock.</p>
-        <p class="lead" style="margin-top:14px">Bank links are read-only. No one can move your money through Sprig.</p>
+        <p class="lead">We don’t keep your financial transactions on our servers. They’re stored on your Apple devices and in your own iCloud. Optional Face ID lock. Bank links are read-only — no one can move your money through Sprig.</p>
       </div>
-      <div class="band-visual reveal">
-        <div class="mesh" aria-hidden="true"></div>
-        <div class="panel-art" style="text-align:center;padding:40px 28px">
-          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin:0 auto 18px">
-            <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" stroke="#3ddc84" stroke-width="1.6"/>
-            <path d="M9 12l2 2 4-4" stroke="#a7f3d0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div style="font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px">Your Apple devices. Your iCloud.</div>
-          <p style="color:var(--mute);font-size:14px;line-height:1.5;max-width:28ch;margin:0 auto">Transactions sync through your own iCloud, not a Sprig database.</p>
-        </div>
-      </div>
+      <img class="shot phone" src="/screenshots/iphone/9.png" alt="Sprig settings and privacy on iPhone" width="390" height="844" loading="lazy">
     </div>
   </section>
 
-  <!-- Video -->
   <section class="video-band" id="video">
     <div class="wrap video-shell">
       <div class="reveal">
+        <p class="chapter-kicker">Walkthrough</p>
         <h2>See Sprig in 60 seconds.</h2>
-        <p class="lead">Accounts, budgets, bills and reports in one walkthrough of the app.</p>
+        <p class="lead">Accounts, budgets, bills and reports in one pass through the app.</p>
         <div class="hero-actions" style="margin-top:24px">
           <a class="btn primary" href="#gallery">Browse screenshots</a>
         </div>
@@ -245,61 +166,33 @@
         <div class="video-phone">
           <video controls playsinline preload="metadata" poster="/video/sprig-promo-poster.jpg" aria-label="Sprig promo video">
             <source src="/video/sprig-promo.mp4" type="video/mp4">
-            Your browser can't play this video.
+            Your browser can’t play this video.
           </video>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Compare -->
-  <section class="compare-band" id="compare">
-    <div class="wrap">
-      <div class="reveal">
-        <h2>Lower price than Copilot, Monarch and YNAB</h2>
+  <section class="price-band" id="compare">
+    <div class="wrap reveal">
+      <p class="chapter-kicker">Pricing</p>
+      <h2>Lower than Copilot, Monarch and YNAB.</h2>
+      <p class="lead">$49.99 your first year for a limited time, then $79.99/year. No ads. We don’t sell your data.</p>
+      <div class="price-line">
+        Sprig $49.99 → $79.99/yr
+        <span>Copilot $95 · Monarch $99.99 · YNAB $109</span>
       </div>
-      <div class="compare-grid reveal">
-        <div class="price-table" role="region" aria-label="Annual pricing comparison" tabindex="0">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">App</th>
-                <th scope="col" class="me">Sprig</th>
-                <th scope="col">Copilot</th>
-                <th scope="col">Monarch</th>
-                <th scope="col">YNAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Annual price</th>
-                <td class="me">$49.99 first year, then $79.99/yr</td>
-                <td>$95/yr</td>
-                <td>$99.99/yr</td>
-                <td>$109/yr</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <aside class="attr-panel">
-          <h3>With Sprig</h3>
-          <ul>
-            <li><i aria-hidden="true">✓</i>No ads. We don't sell your data.</li>
-            <li><i aria-hidden="true">✓</i>Bank links are read-only. No one can move your money through Sprig.</li>
-            <li><i aria-hidden="true">✓</i>We don't keep your financial transactions on our servers. They're stored on your Apple devices and in your own iCloud.</li>
-            <li><i aria-hidden="true">✓</i>$49.99 first year, then $79.99/year.</li>
-          </ul>
-          <div class="cta"><a class="btn primary" href="/switch">Get the switch offer</a></div>
-        </aside>
+      <div class="hero-actions" style="margin-top:28px">
+        <a class="btn primary" href="/switch">Get the switch offer</a>
       </div>
-      <p class="fine">Competitor prices as published on their websites, October 2026. Sprig is not affiliated with Copilot, Monarch, YNAB, Rocket Money, Simplifi or Quicken. All trademarks belong to their owners.</p>
+      <p class="fine">Competitor prices as published on their websites, October 2026. Sprig is not affiliated with Copilot, Monarch or YNAB.</p>
     </div>
   </section>
 
-  <!-- Gallery -->
   <section class="gallery-band" id="gallery">
     <div class="wrap">
       <div class="reveal">
+        <p class="chapter-kicker">Gallery</p>
         <h2>iPhone and iPad</h2>
         <p class="lead">Real screens from the app.</p>
       </div>
@@ -312,8 +205,8 @@
 <section class="closing">
   <div class="wrap">
     <h2>Every account. $49.99 your first year.</h2>
-    <p class="lead">Then $79.99/year. We don't keep your financial transactions on our servers. They're stored on your Apple devices and in your own iCloud.</p>
-    <p class="fine" style="margin-top:10px">iPhone, iPad, Mac · Web (coming soon)</p>
+    <p class="lead">Then $79.99/year. Transactions stay on your Apple devices and in your own iCloud.</p>
+    <p class="fine">iPhone, iPad, Mac · Web (coming soon)</p>
     <div class="hero-actions">
       <a class="btn primary" id="cta2" href="#gallery">Coming soon to the App Store</a>
     </div>
