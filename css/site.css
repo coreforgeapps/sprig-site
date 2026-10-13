@@ -120,7 +120,7 @@ h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em}
 .fine{color:var(--mute-2);font-size:13px;line-height:1.55;margin-top:14px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .hero-meta{margin-top:20px;color:var(--mute);font-size:14px;max-width:42ch;line-height:1.55}
-.hero-meta .plat{display:block;margin-top:8px;color:var(--mute-2);font-size:13px}
+.hero-meta .plat{display:block;margin-top:8px;color:var(--mute);font-size:13px}
 .hero-meta-switch{margin-top:14px;font-size:14px}
 .hero-meta-switch a{color:var(--mute);text-decoration:underline;text-underline-offset:3px}
 .hero-meta-switch a:hover{color:var(--green-bright)}
