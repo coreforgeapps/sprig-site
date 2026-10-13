@@ -28,7 +28,7 @@
         <a href="/faq">FAQ</a>
         <a href="/contact">Contact</a>
       </nav>
-      <a class="btn primary btn-nav" id="nav-cta" href="#gallery">Download on the App Store</a>
+      <a class="btn primary btn-nav" id="nav-cta" href="#testdrive">Test drive free</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -40,7 +40,8 @@
   <a href="/switch">Switch</a>
   <a href="/faq">FAQ</a>
   <a href="/contact">Contact</a>
-  <a class="btn primary" href="#gallery">Download on the App Store</a>
+  <a class="btn primary" id="nav-cta-panel" href="#testdrive">Test drive free</a>
+  <a class="btn ghost" id="nav-download-panel" href="#gallery">Download on the App Store</a>
 </div>
 
 <!-- Growth ledger hero: stem motif + rising register, not a centered dark SaaS hero -->
@@ -64,9 +65,10 @@
       <p class="grow-line">Every account.<br>One clear view.</p>
       <p class="lead">Banks, cards, investments and property on one register — with net worth up top and a running balance after every transaction.</p>
       <div class="hero-actions">
-        <a class="btn primary" id="cta-link" href="#gallery">See Sprig in action</a>
-        <a class="btn ghost" href="/switch">Switching from another app?</a>
+        <a class="btn primary" id="cta-link" href="#testdrive">Test drive free</a>
+        <a class="btn ghost" id="cta-download" href="#gallery">Download on the App Store</a>
       </div>
+      <p class="hero-meta-switch"><a href="/switch">Switching from another app?</a></p>
       <p class="hero-meta">No ads. We don’t sell your data. Transactions stay on your Apple devices.
         <span class="plat">iPhone, iPad, Mac · Web (coming soon)</span>
       </p>
@@ -223,6 +225,22 @@
     </div>
   </section>
 
+  <section class="testdrive-band" id="testdrive">
+    <div class="wrap reveal">
+      <p class="chapter-kicker">Test drive</p>
+      <h2>Start free. Subscribe when you connect your banks.</h2>
+      <p class="lead">Download Sprig and use it with manual accounts — no subscription required until you tap Connect a bank.</p>
+      <ul class="testdrive-list">
+        <li><strong>Free without paying:</strong> Manual accounts and transactions, the running-balance register, Safe to Spend and projections, Insights, Budget, and Recurring schedules.</li>
+        <li><strong>Subscribe to connect banks:</strong> Linking a live bank through Plaid opens a dismissible paywall. You can choose Add a manual account instead and keep going.</li>
+      </ul>
+      <div class="hero-actions" style="margin-top:28px">
+        <a class="btn primary" id="cta-testdrive" href="#gallery">Test drive free</a>
+        <a class="btn ghost" id="cta-download-2" href="#gallery">Download on the App Store</a>
+      </div>
+    </div>
+  </section>
+
   <section class="price-band" id="compare">
     <div class="wrap reveal">
       <p class="chapter-kicker">Pricing</p>
@@ -258,7 +276,8 @@
     <p class="lead">Then $79.99/year. Transactions stay on your Apple devices and in your own iCloud.</p>
     <p class="fine">iPhone, iPad, Mac · Web (coming soon)</p>
     <div class="hero-actions">
-      <a class="btn primary" id="cta2" href="#gallery">Coming soon to the App Store</a>
+      <a class="btn primary" id="cta2" href="#testdrive">Test drive free</a>
+      <a class="btn ghost" id="cta2-download" href="#gallery">Download on the App Store</a>
     </div>
   </div>
 </section>
@@ -303,11 +322,16 @@ var SHOTS = {
   if(names.length) show(names[0]);
 })();
 if(APP_STORE_URL){
-  ["nav-cta","cta-link","cta2"].forEach(function(id){
+  ["cta-download","cta-download-2","cta2-download","nav-download-panel"].forEach(function(id){
     var l=document.getElementById(id);
     if(!l) return;
     l.href=APP_STORE_URL;
     l.textContent="Download on the App Store";
+  });
+  ["cta-testdrive","cta-link","cta2","nav-cta","nav-cta-panel"].forEach(function(id){
+    var l=document.getElementById(id);
+    if(!l) return;
+    l.href=APP_STORE_URL;
   });
 }
 (function(){
