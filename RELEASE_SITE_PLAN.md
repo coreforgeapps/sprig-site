@@ -11,7 +11,7 @@ Basis: fetched 2026-10-04 with curl: https://heysprig.com/, /privacy, /terms, /d
 3. Home page claims that are no longer true: "No budgets to configure" (Budget exists); "Smart clean merchants" and "Investments included" were fine but thin. Subtitle did not mention budgets or insights.
 4. "Coming to the App Store" note: removed. Replaced by a hidden App Store badge block that appears only when APP_STORE_URL is set in index.html.
 5. Screenshots are 322x700, from Aug, no Budget screen, old Insights. They are interim only.
-6. Contact page shows no email address. Fixed: shows support@heysprig.com.
+6. Contact page shows no email address. Fixed: contact via /contact form only (no public email).
 7. Terms: "creating an account", "delete your account", "read-only viewer", and a subscription section that deferred to the App Store. Rewritten generically (auto-renews through Apple, cancel in Apple Account settings, price shown in app and on the listing, nothing priced on the page). Added the Apple standard EULA link (URL from Apple help text, not fetched).
 8. Privacy: said the app collects no email, but the website contact form collects email and message through Web3Forms. Added. Added the App Privacy label match (Other Financial Info and Device ID, linked, app functionality, no tracking, matches PrivacyInfo.xcprivacy), device name in iCloud, Face ID lock, backups.
 9. Data retention table lacked the subscription hash and Plaid user ID that the privacy page lists, and the 90 day notification address expiry (PUSH_DEVICE_TTL in worker). Added.
@@ -33,10 +33,8 @@ Basis: fetched 2026-10-04 with curl: https://heysprig.com/, /privacy, /terms, /d
 
 ## Contact addresses (Gmail evidence, 2026-10-04; MX is Namecheap forwarding)
 
-- support@heysprig.com: receives mail (Supabase mails Sep 17 and Sep 28). SHOWN.
-- website@heysprig.com: receives contact form notifications (Web3Forms). Internal, NOT shown.
-- kevin@heysprig.com: receives and sends (Plaid cases). Personal, NOT shown.
-- privacy@heysprig.com: no mail seen, forwarding unknown. NOT shown (commented option in contact.html).
+- Public site: no email addresses shown; use /contact form only.
+- Internal mailboxes (support, website/Web3Forms, personal, privacy): not published on the site.
 - Not checked: Namecheap forwarding rules (needs Kevin's dashboard).
 
 ## Apple requirements (read 2026-10-04 via helper summarizer; paraphrased)
