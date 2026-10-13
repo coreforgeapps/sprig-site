@@ -438,61 +438,54 @@ h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em}
 }
 .price-line span{color:var(--mute);font-family:var(--body);font-size:15px;letter-spacing:0}
 
-.sr-only{
-  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-  clip:rect(0,0,0,0);white-space:nowrap;border:0;
-}
-.compare-scroll{
-  margin-top:36px;overflow-x:auto;-webkit-overflow-scrolling:touch;
-  border:1px solid var(--line);border-radius:16px;
-  background:linear-gradient(180deg,rgba(61,220,132,.06),rgba(18,32,24,.55));
-  box-shadow:0 24px 60px rgba(0,0,0,.28);
-}
-.compare-table{
-  width:100%;min-width:720px;border-collapse:collapse;font-size:15px;line-height:1.45;
-}
-.compare-table th,.compare-table td{
-  padding:16px 18px;text-align:left;vertical-align:top;
-  border-bottom:1px solid var(--line);
-}
-.compare-table thead th{
-  font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:-.02em;
-  color:var(--mute);background:rgba(3,7,5,.45);
-  position:sticky;top:0;z-index:1;
-}
-.compare-table thead th.col-sprig,
-.compare-table td.col-sprig{
-  background:linear-gradient(180deg,rgba(61,220,132,.14),rgba(61,220,132,.05));
-  color:var(--ink);
-  box-shadow:inset 1px 0 0 rgba(61,220,132,.22),inset -1px 0 0 rgba(61,220,132,.22);
-}
-.compare-table thead th.col-sprig{
-  color:var(--green-bright);font-size:17px;
-}
-.compare-table tbody th[scope="row"]{
-  font-family:var(--display);font-weight:650;font-size:14px;letter-spacing:-.015em;
-  color:var(--ink-soft);width:18ch;min-width:9.5rem;
-  background:rgba(3,7,5,.35);
-  position:sticky;left:0;z-index:2;
-}
-.compare-table tbody td{color:var(--mute)}
-.compare-table tbody td.col-sprig{color:var(--ink);font-weight:560}
-.compare-table tbody td.col-sprig strong{color:var(--green-bright);font-weight:750}
-.compare-table .dash{color:var(--mute-2);opacity:.7;font-weight:500}
-.compare-table tbody tr:last-child th,
-.compare-table tbody tr:last-child td{border-bottom:0}
 .badge-free{
-  display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;
+  display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;
   font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.01em;
   color:#041008;background:linear-gradient(180deg,var(--green-bright),var(--green));
   vertical-align:middle;white-space:nowrap;
 }
+.cards.compare-cards{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:28px;
+  align-items:stretch;
+}
+.compare-cards > .card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+.compare-cards > .card h3{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  margin:0 0 4px;font-size:18px;letter-spacing:-.02em;
+}
+.compare-cards .badge-free{margin-left:0}
+.compare-cards .field{margin-top:10px}
+.compare-cards .field-label{
+  color:var(--mute);font-size:12px;font-weight:500;line-height:1.3;
+}
+.compare-cards .field-value{
+  margin-top:2px;font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.35;
+}
+.compare-cards .card.me .field-value{color:var(--ink)}
+.compare-cards .compare-extra{margin-top:2px}
+.compare-cards .compare-extra:empty{flex:1}
+/* Align Price + Transactions kept across the four cards */
+@supports (grid-template-rows:subgrid){
+  .cards.compare-cards{
+    grid-template-rows:auto auto auto auto;
+  }
+  .compare-cards > .card{
+    display:grid;
+    grid-template-rows:subgrid;
+    grid-row:span 4;
+    align-items:start;
+  }
+  .compare-cards .compare-extra:empty{min-height:0}
+}
 @media (max-width:700px){
-  .compare-scroll{margin-top:28px;border-radius:14px}
-  .compare-table{min-width:640px;font-size:14px}
-  .compare-table th,.compare-table td{padding:14px 12px}
-  .compare-table tbody th[scope="row"]{width:7.5rem;min-width:7.5rem;font-size:13px}
-  .badge-free{display:block;margin:8px 0 0;width:fit-content}
+  .compare-cards > .card h3 .badge-free{margin-top:2px}
 }
 
 .gallery-band{padding:clamp(72px,10vw,110px) 0 60px}
@@ -617,6 +610,12 @@ h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em}
 .card dl{margin:0}
 .card dt{color:var(--mute);font-size:12px;margin-top:10px}
 .card dd{margin:0;font-size:14.5px;font-weight:600;color:var(--ink)}
+@media (max-width:980px){
+  .cards.compare-cards{grid-template-columns:1fr 1fr}
+}
+@media (max-width:700px){
+  .cards.compare-cards{grid-template-columns:1fr}
+}
 .hero-center{text-align:left;padding:40px 0 20px}
 .hero-center h1{max-width:14ch}
 .hero-center em{font-style:normal;color:var(--green-bright)}

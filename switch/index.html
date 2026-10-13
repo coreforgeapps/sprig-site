@@ -11,21 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/site.css" />
 <style>
-.hero-center{text-align:center;padding:40px 0 20px}
-.hero-center h1{max-width:820px;margin-left:auto;margin-right:auto}
-.hero-center .sub{margin-inline:auto;max-width:640px}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
-.card.me{border-color:rgba(61,220,132,.35);background:linear-gradient(180deg,rgba(61,220,132,.10),var(--surface))}
-.card.me h3{color:var(--green)}
-.card dl{margin:0;display:grid;gap:2px}
-.card dt{color:var(--mute);font-size:12px;margin-top:10px}
-.card dd{margin:0;font-size:14.5px;font-weight:600;color:var(--ink)}
-.hero-center{text-align:left}
+.hero-center{text-align:left;padding:40px 0 20px}
 .hero-center h1{max-width:16ch;margin:0}
 .hero-center .sub{margin:14px 0 0;max-width:48ch}
 .pill-row{justify-content:flex-start}
-@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -75,44 +64,10 @@
 
 <main class="wrap">
   <section class="section tight" id="compare">
-    <h2>Lower than Copilot, Monarch and YNAB</h2>
-    <div class="cards">
-      <div class="card me">
-        <h3>Sprig</h3>
-        <dl>
-          <dt>Price</dt>
-          <dd>$49.99 first year, then $79.99/yr</dd>
-          <dt>Ads / sells data</dt>
-          <dd>No / No</dd>
-          <dt>Bank connections</dt>
-          <dd>Read-only. No one can move your money through Sprig.</dd>
-          <dt>Platforms</dt>
-          <dd>iPhone &amp; iPad. Coming soon: Mac &amp; Web.</dd>
-        </dl>
-      </div>
-      <div class="card">
-        <h3>Copilot</h3>
-        <dl>
-          <dt>Price</dt>
-          <dd>$95/yr</dd>
-        </dl>
-      </div>
-      <div class="card">
-        <h3>Monarch</h3>
-        <dl>
-          <dt>Price</dt>
-          <dd>$99.99/yr</dd>
-        </dl>
-      </div>
-      <div class="card">
-        <h3>YNAB</h3>
-        <dl>
-          <dt>Price</dt>
-          <dd>$109/yr</dd>
-        </dl>
-      </div>
-    </div>
-    <p class="fine">Competitor prices as published on their websites, October 2026. Sprig is not affiliated with Copilot, Monarch, YNAB, Rocket Money, Simplifi or Quicken. All trademarks belong to their owners.</p>
+    <h2>Lower than Copilot, Monarch and YNAB.</h2>
+    <div class="cards compare-cards" data-compare-cards role="region" aria-label="Price and privacy comparison"></div>
+    <script src="/js/compare-cards.js"></script>
+    <p class="fine">Competitor prices and data storage per each company’s published website and privacy policy, checked October 13, 2026. Sprig is not affiliated with Copilot, Monarch, YNAB, Rocket Money, Simplifi or Quicken. All trademarks belong to their owners.</p>
   </section>
 
   <section class="section tight" id="offer">
