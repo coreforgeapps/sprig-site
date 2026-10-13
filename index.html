@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add("html-js");</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <title>Sprig: Money &amp; Budget — every account, one clear view</title>
 <meta name="description" content="Every bank, card and investment account in one clear view, with a running balance after every transaction. We don't keep your financial transactions on our servers. iPhone, iPad, Mac." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
@@ -51,7 +55,7 @@
 
 <main>
   <div class="wrap">
-    <section class="section" id="features">
+    <section class="section reveal" id="features">
       <div class="kicker">Features</div>
       <h2>What you get in Sprig</h2>
       <div class="grid-features">
@@ -66,7 +70,7 @@
       </div>
     </section>
 
-    <section class="promo" id="video">
+    <section class="promo reveal" id="video">
       <div class="promo-in">
         <div>
           <div class="kicker">Watch</div>
@@ -82,7 +86,7 @@
       </div>
     </section>
 
-    <section class="section tight" id="compare">
+    <section class="section tight reveal" id="compare">
       <div class="kicker">Compare</div>
       <h2>Lower price than Copilot, Monarch and YNAB</h2>
       <div class="compare-grid">
@@ -124,7 +128,7 @@
       <p class="fine">Competitor prices as published on their websites, October 2026.</p>
     </section>
 
-    <section class="gallery" id="gallery">
+    <section class="gallery reveal" id="gallery">
       <div class="kicker">Screens</div>
       <h2>iPhone and iPad</h2>
       <div class="tabs" id="tabs" role="tablist" aria-label="Device screenshots"></div>
@@ -191,6 +195,24 @@ if(APP_STORE_URL){
     l.textContent="Download on the App Store";
   });
 }
+(function(){
+  var nodes=document.querySelectorAll(".reveal");
+  if(!nodes.length) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    document.documentElement.classList.remove("html-js");
+    return;
+  }
+  if(!("IntersectionObserver" in window)){
+    nodes.forEach(function(n){n.classList.add("in")});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}
+    });
+  },{rootMargin:"0px 0px -8% 0px",threshold:0.12});
+  nodes.forEach(function(n){io.observe(n)});
+})();
 </script>
 </body>
 </html>
