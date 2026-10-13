@@ -428,7 +428,7 @@ h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em}
   box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px var(--line),0 0 40px rgba(61,220,132,.12);
 }
 
-.price-band{padding:clamp(72px,10vw,110px) 0;border-bottom:1px solid var(--line)}
+.price-band{padding:clamp(56px,8vw,88px) 0;border-bottom:1px solid var(--line)}
 .price-band h2{max-width:18ch}
 .price-band .lead{margin-top:16px;max-width:42ch}
 .price-line{
@@ -437,6 +437,29 @@ h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em}
   color:var(--green-bright);
 }
 .price-line span{color:var(--mute);font-family:var(--body);font-size:15px;letter-spacing:0}
+.compare-line{margin:0;max-width:42rem}
+.compare-line-link{
+  display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px;
+  text-decoration:none;color:inherit;
+}
+.compare-line-text{
+  font-family:var(--display);font-size:clamp(22px,3.2vw,34px);font-weight:700;
+  letter-spacing:-.035em;line-height:1.2;color:var(--ink);
+}
+.compare-line-cta{
+  font-family:var(--body);font-size:15px;font-weight:600;letter-spacing:-.01em;
+  color:var(--green-bright);opacity:.85;white-space:nowrap;
+  transition:opacity .2s ease,transform .2s ease;
+}
+.compare-line-link:hover .compare-line-cta,
+.compare-line-link:focus-visible .compare-line-cta{
+  opacity:1;transform:translateX(3px);
+}
+.compare-line-link:focus-visible{outline:none}
+.compare-line-link:focus-visible .compare-line-text{
+  box-shadow:0 2px 0 0 rgba(61,220,132,.55);
+}
+.compare-line-note{margin-top:14px;max-width:48rem;font-size:12.5px;line-height:1.45;color:var(--mute-2)}
 
 .badge-free{
   display:inline-block;margin-left:8px;padding:3px 8px;border-radius:999px;
