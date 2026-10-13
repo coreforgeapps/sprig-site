@@ -46,10 +46,15 @@
 
 <!-- Growth ledger hero: stem motif + rising register, not a centered dark SaaS hero -->
 <section class="grow-hero" aria-label="Sprig">
+  <div class="hero-orbs" aria-hidden="true">
+    <span class="orb orb-green"></span>
+    <span class="orb orb-sky"></span>
+    <span class="orb orb-amber"></span>
+  </div>
   <div class="stem" aria-hidden="true">
     <svg class="stem-svg" viewBox="0 0 40 900" preserveAspectRatio="none">
-      <path class="stem-path" d="M20 0 C18 120, 26 220, 20 340 C12 480, 28 620, 20 900" fill="none" stroke="#1a6b46" stroke-width="2.2"/>
-      <g class="stem-leaves" fill="#1a6b46">
+      <path class="stem-path" d="M20 0 C18 120, 26 220, 20 340 C12 480, 28 620, 20 900" fill="none" stroke="#3ddc84" stroke-width="2.2"/>
+      <g class="stem-leaves" fill="#3ddc84">
         <path d="M20 110 C42 95, 58 108, 62 128 C40 124, 26 118, 20 110Z" opacity=".85"/>
         <path d="M20 250 C-2 232, -16 248, -18 270 C2 264, 14 256, 20 250Z" opacity=".7"/>
         <path d="M20 420 C44 402, 68 418, 72 448 C46 440, 28 430, 20 420Z" opacity=".8"/>
@@ -60,7 +65,6 @@
 
   <div class="wrap grow-hero-grid">
     <div class="grow-copy">
-      <p class="grow-kicker">Money that grows clearer</p>
       <h1 class="grow-brand">Sprig</h1>
       <p class="grow-line">Every account.<br>One clear view.</p>
       <p class="lead">Banks, cards, investments and property on one register — with net worth up top and a running balance after every transaction.</p>
@@ -69,7 +73,7 @@
         <a class="btn ghost" id="cta-download" href="#gallery">Download on the App Store</a>
       </div>
       <p class="hero-meta-switch"><a href="/switch">Switching from another app?</a></p>
-      <p class="hero-meta">No ads. We don’t sell your data. Transactions stay on your Apple devices.
+      <p class="hero-meta">No ads. We don’t sell your data. We don't keep your financial transactions on our servers. They're stored on your Apple devices and in your own iCloud.
         <span class="plat">iPhone, iPad, Mac · Web (coming soon)</span>
       </p>
     </div>
@@ -78,22 +82,21 @@
       <svg class="growth-chart" viewBox="0 0 420 360" role="img">
         <defs>
           <linearGradient id="leafFill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1a6b46" stop-opacity=".35"/>
-            <stop offset="100%" stop-color="#1a6b46" stop-opacity="0"/>
+            <stop offset="0%" stop-color="#3ddc84" stop-opacity=".45"/>
+            <stop offset="100%" stop-color="#3ddc84" stop-opacity="0"/>
           </linearGradient>
         </defs>
         <text x="24" y="36" class="gv-label">Net worth</text>
         <text x="24" y="78" class="gv-value">$199,136</text>
         <path class="gv-area" d="M24 280 C70 268, 110 250, 150 230 C200 200, 240 210, 280 160 C320 110, 360 95, 396 70 L396 320 L24 320 Z" fill="url(#leafFill)"/>
-        <path class="gv-line" d="M24 280 C70 268, 110 250, 150 230 C200 200, 240 210, 280 160 C320 110, 360 95, 396 70" fill="none" stroke="#1a6b46" stroke-width="5.5" stroke-linecap="round"/>
-        <!-- leaf nodes along the line -->
-        <g class="gv-nodes" fill="#0a1f16">
+        <path class="gv-line" d="M24 280 C70 268, 110 250, 150 230 C200 200, 240 210, 280 160 C320 110, 360 95, 396 70" fill="none" stroke="#3ddc84" stroke-width="5.5" stroke-linecap="round"/>
+        <g class="gv-nodes" fill="#5dff9f">
           <circle cx="24" cy="280" r="5.5"/>
           <circle cx="150" cy="230" r="5.5"/>
           <circle cx="280" cy="160" r="5.5"/>
-          <circle cx="396" cy="70" r="7" fill="#1a6b46"/>
+          <circle cx="396" cy="70" r="7" fill="#3ddc84"/>
         </g>
-        <g class="gv-sprig" fill="#1a6b46">
+        <g class="gv-sprig" fill="#5dff9f">
           <path d="M396 70 C410 52, 424 58, 428 74 C414 72, 402 70, 396 70Z"/>
         </g>
       </svg>
@@ -108,7 +111,6 @@
   <!-- Section order: Register → Match → Safe → Budgets → Portfolio → Private → Walk → Price → Gallery -->
   <section class="ledger" id="accounts">
     <div class="wrap ledger-head reveal">
-      <p class="chapter-kicker">The register</p>
       <h2>Net worth on top. Everything underneath.</h2>
       <p class="lead">Checking, savings, cards, investments and property side by side — the whole picture without jumping apps.</p>
     </div>
@@ -120,7 +122,6 @@
   <section class="frond">
     <div class="wrap frond-grid">
       <div class="frond-copy reveal">
-        <p class="chapter-kicker">Running balance</p>
         <h2>A balance that grows with every line.</h2>
         <p class="lead">A running balance after every transaction, the way a register works. Clean merchant names. No guesswork.</p>
       </div>
@@ -139,7 +140,6 @@
   <section class="frond invert">
     <div class="wrap frond-grid">
       <div class="frond-copy reveal">
-        <p class="chapter-kicker">Match</p>
         <h2>Log it now. Match it later.</h2>
         <p class="lead">Record a purchase as you make it. When the bank posts, Sprig matches the two so nothing is counted twice.</p>
       </div>
@@ -151,7 +151,6 @@
 
   <section class="canopy">
     <div class="wrap canopy-copy reveal">
-      <p class="chapter-kicker">Safe to spend</p>
       <h2>One number for today. Bills before they land.</h2>
       <p class="lead">What’s safe to spend now, plus upcoming paychecks and bills on the calendar.</p>
     </div>
@@ -170,7 +169,6 @@
   <section class="frond">
     <div class="wrap frond-grid">
       <div class="frond-copy reveal">
-        <p class="chapter-kicker">Budgets</p>
         <h2>Budgets that show what’s left to grow.</h2>
         <p class="lead">Plan by group and category. Track spending, income and cash flow as the month moves.</p>
       </div>
@@ -183,7 +181,6 @@
   <section class="frond invert">
     <div class="wrap frond-grid">
       <div class="frond-copy reveal">
-        <p class="chapter-kicker">Portfolio</p>
         <h2>Your portfolio next to cash.</h2>
         <p class="lead">Brokerage holdings beside everyday accounts. One financial picture.</p>
       </div>
@@ -196,7 +193,6 @@
   <section class="soil" id="security">
     <div class="wrap soil-grid reveal">
       <div>
-        <p class="chapter-kicker">Private soil</p>
         <h2>Private by design.</h2>
         <p class="lead">We don’t keep your financial transactions on our servers. They’re stored on your Apple devices and in your own iCloud. Optional Face ID lock. Bank links are read-only.</p>
       </div>
@@ -207,7 +203,6 @@
   <section class="video-band" id="video">
     <div class="wrap video-shell">
       <div class="reveal">
-        <p class="chapter-kicker">Walkthrough</p>
         <h2>See Sprig in 60 seconds.</h2>
         <p class="lead">Accounts, budgets, bills and reports in one pass through the app.</p>
         <div class="hero-actions" style="margin-top:24px">
@@ -227,7 +222,6 @@
 
   <section class="testdrive-band" id="testdrive">
     <div class="wrap reveal">
-      <p class="chapter-kicker">Test drive</p>
       <h2>Start free. Subscribe when you connect your banks.</h2>
       <p class="lead">Download Sprig and use it with manual accounts — no subscription required until you tap Connect a bank.</p>
       <ul class="testdrive-list">
@@ -243,7 +237,6 @@
 
   <section class="price-band" id="compare">
     <div class="wrap reveal">
-      <p class="chapter-kicker">Pricing</p>
       <h2>Lower than Copilot, Monarch and YNAB.</h2>
       <p class="lead">$49.99 your first year for a limited time, then $79.99/year. No ads. We don’t sell your data.</p>
       <div class="price-line">
@@ -260,7 +253,6 @@
   <section class="gallery-band" id="gallery">
     <div class="wrap">
       <div class="reveal">
-        <p class="chapter-kicker">Gallery</p>
         <h2>iPhone and iPad</h2>
         <p class="lead">Real screens from the app.</p>
       </div>
@@ -273,7 +265,7 @@
 <section class="closing">
   <div class="wrap">
     <h2>Every account. $49.99 your first year.</h2>
-    <p class="lead">Then $79.99/year. Transactions stay on your Apple devices and in your own iCloud.</p>
+    <p class="lead">Then $79.99/year. We don't keep your financial transactions on our servers. They're stored on your Apple devices and in your own iCloud.</p>
     <p class="fine">iPhone, iPad, Mac · Web (coming soon)</p>
     <div class="hero-actions">
       <a class="btn primary" id="cta2" href="#testdrive">Test drive free</a>
