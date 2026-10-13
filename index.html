@@ -60,6 +60,17 @@ h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.025em;line-height:1.1;margi
 .closing .actions{justify-content:center}
 footer{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;padding:26px;font-size:13px;color:var(--mute);background:var(--bg);border-top:1px solid var(--line)}
 footer a{text-decoration:none}footer a:hover{color:var(--text)}
+.promo{padding:56px 0 24px}
+.promo-in{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;background:var(--bg);color:var(--text);border-radius:32px;padding:56px 64px;background:radial-gradient(700px 420px at 90% 0%,#1f3f2e 0,transparent 60%),var(--bg)}
+.promo .kicker{color:var(--green)}
+.promo h2{color:var(--text)}
+.promo p{color:var(--mute);font-size:18px;line-height:1.55;max-width:460px}
+.promo ul{list-style:none;margin-top:22px;display:grid;gap:10px;color:var(--text);font-size:15px}
+.promo li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:10px;vertical-align:middle;box-shadow:0 0 8px var(--green)}
+.phone{width:300px;max-width:100%;aspect-ratio:9/16;border-radius:40px;border:8px solid #1c2621;overflow:hidden;background:#0b1512;box-shadow:0 40px 90px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07)}
+.phone video{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.promo-in{grid-template-columns:1fr;text-align:center;padding:40px 24px;gap:32px}.promo p{margin:0 auto}.promo ul{justify-items:center}.phone{margin:0 auto}}
+@media(max-width:600px){.promo{padding:40px 0 8px}.promo-in{border-radius:24px;padding:36px 18px 28px}.phone{width:min(280px,78vw);border-radius:34px;border-width:7px}.promo ul{display:none}}
 [hidden]{display:none!important}
 @media(max-width:1060px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;padding:30px 0 60px}.sub{margin:0 auto}.actions{justify-content:center}.grid{grid-template-columns:1fr 1fr}.nav a:not(:last-child){display:none}}
 @media(max-width:600px){.grid{grid-template-columns:1fr}.trust{grid-template-columns:1fr}.trust div{padding:12px 0;text-align:center}.row img{width:200px}.row img.ipad{width:320px}section.features{padding:64px 0 20px}}
@@ -108,6 +119,18 @@ footer a{text-decoration:none}footer a:hover{color:var(--text)}
    <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/></svg></div><h3>Budgets that make sense</h3><p>Plan by group and category, see what's left in each, and spot trends in spending, income and cash flow.</p></div>
    <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V11M10 20V5M16 20v-6M22 20H2"/></svg></div><h3>Your investment portfolio</h3><p>Brokerage holdings next to your everyday accounts, so your whole financial picture is in one place.</p></div>
    <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h3>Secure on your Apple devices</h3><p>Your transactions aren't kept on our servers. They sync through your own iCloud, with Face ID lock if you want it.</p></div>
+  </div>
+ </section>
+
+ <section class="promo" id="video">
+  <div class="promo-in">
+   <div>
+    <div class="kicker">Watch</div>
+    <h2>See Sprig in 60 seconds.</h2>
+    <p>Accounts, cards, investments, budgets, bills and reports, all in one calm app. Turn the sound on.</p>
+    <ul><li>Every account in one view</li><li>Budgets and bills before they're due</li><li>Insights that show where it all goes</li></ul>
+   </div>
+   <div class="phone"><video controls playsinline preload="metadata" poster="/video/sprig-promo-poster.jpg" aria-label="Sprig promo video"><source src="/video/sprig-promo.mp4" type="video/mp4">Your browser can't play this video.</video></div>
   </div>
  </section>
 
