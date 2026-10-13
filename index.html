@@ -15,22 +15,24 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="hero-shell">
-  <div class="wrap">
-    <header class="site-header">
-      <a class="brand" href="/">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="23" fill="#1E7A50"/><g fill="#fff"><path d="M48.6 70 L51.4 70 L50.6 85 L49.4 85 Z"/><path d="M50 16 C69 25 77 44 50 72 C23 44 31 25 50 16 Z"/></g><path d="M49.4 26 L50.6 26 L50.3 68 L49.7 68 Z" fill="#1E7A50"/></svg>
-        Sprig
-      </a>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="23" fill="#1E7A50"/><g fill="#fff"><path d="M48.6 70 L51.4 70 L50.6 85 L49.4 85 Z"/><path d="M50 16 C69 25 77 44 50 72 C23 44 31 25 50 16 Z"/></g><path d="M49.4 26 L50.6 26 L50.3 68 L49.7 68 Z" fill="#1E7A50"/></svg>
+      Sprig
+    </a>
+    <div class="topbar-right">
       <nav class="nav" aria-label="Primary">
-        <a href="#accounts">Product</a>
-        <a href="#video">Demo</a>
         <a href="#compare">Pricing</a>
-        <a href="#gallery">Screens</a>
         <a href="/switch">Switch &amp; Save</a>
       </nav>
-    </header>
+      <a class="btn primary btn-nav" id="nav-cta" href="#gallery">Download on the App Store</a>
+    </div>
+  </div>
+</header>
 
+<div class="hero-shell">
+  <div class="wrap">
     <section class="hero">
       <div class="hero-copy">
         <h1>Every account.<br>One clear view.<br><span class="grad-text">Private by design.</span></h1>
@@ -347,8 +349,9 @@ var SHOTS = {
   if(names.length) show(names[0]);
 })();
 if(APP_STORE_URL){
-  ["cta-link","cta2"].forEach(function(id){
+  ["nav-cta","cta-link","cta2"].forEach(function(id){
     var l=document.getElementById(id);
+    if(!l) return;
     l.href=APP_STORE_URL;
     l.textContent="Download on the App Store";
   });
