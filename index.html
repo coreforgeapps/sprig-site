@@ -43,110 +43,160 @@
   <a class="btn primary" href="#gallery">Download on the App Store</a>
 </div>
 
-<section class="hero-bleed" aria-label="Sprig">
-  <div class="hero-bleed-copy wrap">
-    <h1 class="hero-name">Sprig</h1>
-    <p class="hero-line">Every account. One clear view.</p>
-    <p class="lead">Banks, cards, investments and property together — with net worth up top and a running balance after every transaction.</p>
-    <div class="hero-actions">
-      <a class="btn primary" id="cta-link" href="#gallery">See Sprig in action</a>
-      <a class="btn ghost" href="/switch">Switching from another app?</a>
-    </div>
-    <p class="hero-meta">No ads. We don’t sell your data. Transactions stay on your Apple devices.
-      <span class="plat">iPhone, iPad, Mac · Web (coming soon)</span>
-    </p>
+<!-- Growth ledger hero: stem motif + rising register, not a centered dark SaaS hero -->
+<section class="grow-hero" aria-label="Sprig">
+  <div class="stem" aria-hidden="true">
+    <svg class="stem-svg" viewBox="0 0 40 900" preserveAspectRatio="none">
+      <path class="stem-path" d="M20 0 C18 120, 26 220, 20 340 C12 480, 28 620, 20 900" fill="none" stroke="#1a6b46" stroke-width="2.2"/>
+      <g class="stem-leaves" fill="#1a6b46">
+        <path d="M20 110 C42 95, 58 108, 62 128 C40 124, 26 118, 20 110Z" opacity=".85"/>
+        <path d="M20 250 C-2 232, -16 248, -18 270 C2 264, 14 256, 20 250Z" opacity=".7"/>
+        <path d="M20 420 C44 402, 68 418, 72 448 C46 440, 28 430, 20 420Z" opacity=".8"/>
+        <path d="M20 610 C0 588, -22 602, -24 632 C0 622, 12 614, 20 610Z" opacity=".65"/>
+      </g>
+    </svg>
   </div>
-  <div class="hero-bleed-visual" aria-hidden="true">
-    <img src="/screenshots/iphone/1.png" alt="" width="390" height="844" loading="eager">
+
+  <div class="wrap grow-hero-grid">
+    <div class="grow-copy">
+      <p class="grow-kicker">Money that grows clearer</p>
+      <h1 class="grow-brand">Sprig</h1>
+      <p class="grow-line">Every account.<br>One clear view.</p>
+      <p class="lead">Banks, cards, investments and property on one register — with net worth up top and a running balance after every transaction.</p>
+      <div class="hero-actions">
+        <a class="btn primary" id="cta-link" href="#gallery">See Sprig in action</a>
+        <a class="btn ghost" href="/switch">Switching from another app?</a>
+      </div>
+      <p class="hero-meta">No ads. We don’t sell your data. Transactions stay on your Apple devices.
+        <span class="plat">iPhone, iPad, Mac · Web (coming soon)</span>
+      </p>
+    </div>
+
+    <div class="growth-viz" aria-hidden="true">
+      <svg class="growth-chart" viewBox="0 0 420 360" role="img">
+        <defs>
+          <linearGradient id="leafFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1a6b46" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#1a6b46" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <text x="24" y="36" class="gv-label">Net worth</text>
+        <text x="24" y="78" class="gv-value">$199,136</text>
+        <path class="gv-area" d="M24 280 C70 268, 110 250, 150 230 C200 200, 240 210, 280 160 C320 110, 360 95, 396 70 L396 320 L24 320 Z" fill="url(#leafFill)"/>
+        <path class="gv-line" d="M24 280 C70 268, 110 250, 150 230 C200 200, 240 210, 280 160 C320 110, 360 95, 396 70" fill="none" stroke="#1a6b46" stroke-width="5.5" stroke-linecap="round"/>
+        <!-- leaf nodes along the line -->
+        <g class="gv-nodes" fill="#0a1f16">
+          <circle cx="24" cy="280" r="5.5"/>
+          <circle cx="150" cy="230" r="5.5"/>
+          <circle cx="280" cy="160" r="5.5"/>
+          <circle cx="396" cy="70" r="7" fill="#1a6b46"/>
+        </g>
+        <g class="gv-sprig" fill="#1a6b46">
+          <path d="M396 70 C410 52, 424 58, 428 74 C414 72, 402 70, 396 70Z"/>
+        </g>
+      </svg>
+      <div class="growth-phone">
+        <img src="/screenshots/iphone/1.png" alt="" width="390" height="844" loading="eager">
+      </div>
+    </div>
   </div>
 </section>
 
 <main id="main">
-  <section class="spotlight" id="accounts">
-    <div class="wrap">
-      <div class="spotlight-copy reveal">
-        <p class="chapter-kicker">Accounts</p>
-        <h2>Net worth on top. Everything underneath.</h2>
-        <p class="lead">Checking, savings, cards, investments and property side by side — the whole picture without jumping apps.</p>
-      </div>
+  <!-- Section order: Register → Match → Safe → Budgets → Portfolio → Private → Walk → Price → Gallery -->
+  <section class="ledger" id="accounts">
+    <div class="wrap ledger-head reveal">
+      <p class="chapter-kicker">The register</p>
+      <h2>Net worth on top. Everything underneath.</h2>
+      <p class="lead">Checking, savings, cards, investments and property side by side — the whole picture without jumping apps.</p>
     </div>
-    <div class="spotlight-frame reveal">
+    <div class="ledger-strip reveal">
       <img src="/screenshots/ipad/1.png" alt="Sprig accounts and net worth on iPad" width="820" height="615" loading="lazy">
     </div>
   </section>
 
-  <section class="chapter">
-    <div class="wrap chapter-grid flip">
-      <div class="chapter-copy reveal">
-        <p class="chapter-kicker">Balance</p>
-        <h2>A running balance after every transaction.</h2>
-        <p class="lead">The way a register works. Clean merchant names. No guesswork about what you actually have.</p>
+  <section class="frond">
+    <div class="wrap frond-grid">
+      <div class="frond-copy reveal">
+        <p class="chapter-kicker">Running balance</p>
+        <h2>A balance that grows with every line.</h2>
+        <p class="lead">A running balance after every transaction, the way a register works. Clean merchant names. No guesswork.</p>
       </div>
-      <div class="chapter-visual reveal">
+      <div class="frond-visual reveal">
+        <svg class="frond-mark" viewBox="0 0 120 200" aria-hidden="true">
+          <path d="M60 8 C58 60, 70 100, 60 190" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M60 48 C88 36, 108 48, 112 72 C84 68, 68 58, 60 48Z"/>
+          <path d="M60 96 C32 82, 12 96, 10 122 C36 116, 52 106, 60 96Z"/>
+          <path d="M60 148 C90 134, 112 148, 114 176 C86 168, 68 156, 60 148Z"/>
+        </svg>
         <img class="shot phone" src="/screenshots/iphone/2.png" alt="Sprig running balance on iPhone" width="390" height="844" loading="lazy">
       </div>
     </div>
   </section>
 
-  <section class="chapter">
-    <div class="wrap chapter-grid">
-      <div class="chapter-copy reveal">
+  <section class="frond invert">
+    <div class="wrap frond-grid">
+      <div class="frond-copy reveal">
         <p class="chapter-kicker">Match</p>
         <h2>Log it now. Match it later.</h2>
         <p class="lead">Record a purchase as you make it. When the bank posts, Sprig matches the two so nothing is counted twice.</p>
       </div>
-      <div class="chapter-visual reveal">
+      <div class="frond-visual reveal">
         <img class="shot phone" src="/screenshots/iphone/5.png" alt="Sprig transaction matching on iPhone" width="390" height="844" loading="lazy">
       </div>
     </div>
   </section>
 
-  <section class="spotlight alt">
-    <div class="wrap">
-      <div class="spotlight-copy reveal">
-        <p class="chapter-kicker">Safe to spend</p>
-        <h2>One number for today.</h2>
-        <p class="lead">What’s safe to spend now, plus a heads-up before an account runs low. Bills and paychecks show up before they hit.</p>
-      </div>
+  <section class="canopy">
+    <div class="wrap canopy-copy reveal">
+      <p class="chapter-kicker">Safe to spend</p>
+      <h2>One number for today. Bills before they land.</h2>
+      <p class="lead">What’s safe to spend now, plus upcoming paychecks and bills on the calendar.</p>
     </div>
-    <div class="spotlight-pair reveal">
-      <img src="/screenshots/iphone/4.png" alt="Sprig Safe to Spend on iPhone" width="390" height="844" loading="lazy">
-      <img src="/screenshots/iphone/6.png" alt="Sprig scheduled transactions on iPhone" width="390" height="844" loading="lazy">
+    <div class="canopy-row reveal">
+      <figure>
+        <img src="/screenshots/iphone/4.png" alt="Sprig Safe to Spend on iPhone" width="390" height="844" loading="lazy">
+        <figcaption>Safe to Spend</figcaption>
+      </figure>
+      <figure>
+        <img src="/screenshots/iphone/6.png" alt="Sprig scheduled transactions on iPhone" width="390" height="844" loading="lazy">
+        <figcaption>Upcoming</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="chapter">
-    <div class="wrap chapter-grid flip">
-      <div class="chapter-copy reveal">
+  <section class="frond">
+    <div class="wrap frond-grid">
+      <div class="frond-copy reveal">
         <p class="chapter-kicker">Budgets</p>
-        <h2>Budgets that show what’s left.</h2>
+        <h2>Budgets that show what’s left to grow.</h2>
         <p class="lead">Plan by group and category. Track spending, income and cash flow as the month moves.</p>
       </div>
-      <div class="chapter-visual reveal">
-        <img class="shot bleed" src="/screenshots/ipad/3.png" alt="Sprig budgets on iPad" width="820" height="615" loading="lazy">
+      <div class="frond-visual reveal">
+        <img class="shot wide" src="/screenshots/ipad/3.png" alt="Sprig budgets on iPad" width="820" height="615" loading="lazy">
       </div>
     </div>
   </section>
 
-  <section class="chapter">
-    <div class="wrap chapter-grid">
-      <div class="chapter-copy reveal">
+  <section class="frond invert">
+    <div class="wrap frond-grid">
+      <div class="frond-copy reveal">
         <p class="chapter-kicker">Portfolio</p>
         <h2>Your portfolio next to cash.</h2>
         <p class="lead">Brokerage holdings beside everyday accounts. One financial picture.</p>
       </div>
-      <div class="chapter-visual reveal">
+      <div class="frond-visual reveal">
         <img class="shot phone" src="/screenshots/iphone/8.png" alt="Sprig investment portfolio on iPhone" width="390" height="844" loading="lazy">
       </div>
     </div>
   </section>
 
-  <section class="privacy-band" id="security">
-    <div class="wrap privacy-grid reveal">
+  <section class="soil" id="security">
+    <div class="wrap soil-grid reveal">
       <div>
-        <p class="chapter-kicker">Privacy</p>
+        <p class="chapter-kicker">Private soil</p>
         <h2>Private by design.</h2>
-        <p class="lead">We don’t keep your financial transactions on our servers. They’re stored on your Apple devices and in your own iCloud. Optional Face ID lock. Bank links are read-only — no one can move your money through Sprig.</p>
+        <p class="lead">We don’t keep your financial transactions on our servers. They’re stored on your Apple devices and in your own iCloud. Optional Face ID lock. Bank links are read-only.</p>
       </div>
       <img class="shot phone" src="/screenshots/iphone/9.png" alt="Sprig settings and privacy on iPhone" width="390" height="844" loading="lazy">
     </div>
