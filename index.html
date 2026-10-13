@@ -299,7 +299,6 @@
     <div class="wrap">
       <div class="reveal">
         <h2>iPhone and iPad</h2>
-        <p class="lead">Real screens from the app.</p>
       </div>
       <div class="tabs" id="tabs" role="tablist" aria-label="Device screenshots"></div>
       <div class="shot-row" id="row"></div>
@@ -340,13 +339,17 @@ var SHOTS = {
   var tabs=document.getElementById("tabs"),row=document.getElementById("row");
   function show(n){
     row.innerHTML="";
+    row.setAttribute("data-device", n);
     SHOTS[n].files.forEach(function(f,i){
+      var card=document.createElement("div");
+      card.className="shot-card shot-card--"+SHOTS[n].cls;
       var im=new Image();
       im.src=SHOTS[n].dir+f;
       im.alt=SHOTS[n].alt+" "+(i+1);
-      im.className=SHOTS[n].cls;
       im.loading="lazy";
-      row.appendChild(im);
+      im.decoding="async";
+      card.appendChild(im);
+      row.appendChild(card);
     });
     Array.prototype.forEach.call(tabs.children,function(b){b.setAttribute("aria-selected",b.textContent===n)});
   }
