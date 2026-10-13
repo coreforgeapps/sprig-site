@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/png" href="/favicon.png" />
 <title>FAQ | Sprig</title>
-<meta name="description" content="How to use Sprig: accounts, transactions, Safe to Spend, Reports, Settings, and privacy." />
+<meta name="description" content="How to use Sprig: Accounts, Insights, Budget, Safe to Spend, Portfolio, and Settings." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -43,22 +43,22 @@
 
 <main class="wrap faq-page" id="main">
   <h1>FAQ</h1>
-  <p class="lead">How to use Sprig, in plain language. Named after the screens and buttons in the app.</p>
+  <p class="lead">How to use Sprig, named after the screens and buttons in the app.</p>
 
   <section class="faq-section" aria-labelledby="faq-start">
     <h2 id="faq-start">Getting started</h2>
     <div class="faq-list">
       <details>
-        <summary>What do I see when I open Sprig?</summary>
-        <div class="ans">After you Agree and continue, the main tabs are Banking, Reports, and Settings. Portfolio appears once you have an investment account. A short tour walks the sample data the first time; Replay tour is in Settings if you want it again.</div>
+        <summary>What are the main tabs?</summary>
+        <div class="ans">Along the bottom you get Accounts, Insights, Budget, and Settings. On iPad, a sidebar lists Summary, Portfolio, and your banks, property, and loans.</div>
       </details>
       <details>
-        <summary>How do I connect my first bank?</summary>
-        <div class="ans">Open Settings → Accounts → Add an account. Sign in on your bank’s own screen. Sprig then sets up your accounts (a short wait is normal) and Banking fills in automatically.</div>
+        <summary>How do I add a bank?</summary>
+        <div class="ans">Tap + Add account (shown on Portfolio and elsewhere with the green +). Connecting a bank needs a subscription. Links are read-only — Sprig never trades or moves money.</div>
       </details>
       <details>
         <summary>Which devices does Sprig run on?</summary>
-        <div class="ans">iPhone and iPad. The app uses a tab layout on iPhone and a sidebar layout on iPad.</div>
+        <div class="ans">iPhone and iPad. The App Store gallery includes both. There are no Mac screenshots yet.</div>
       </details>
       <details>
         <summary>How do I get support?</summary>
@@ -72,27 +72,23 @@
     <div class="faq-list">
       <details>
         <summary>Where does the bank data come from?</summary>
-        <div class="ans">You link each bank through Add an account. Links are read-only — money cannot move in or out through Sprig. Accounts update automatically after you connect; you do not pull to refresh.</div>
+        <div class="ans">You link each bank with + Add account and sign in through the bank flow. Accounts update on their own. Sprig is read-only — it never trades or moves your money.</div>
       </details>
       <details>
-        <summary>How do I add another account?</summary>
-        <div class="ans">Settings → Accounts → Add an account. Use the same flow for checking, savings, cards, loans, and brokerages your bank offers in that sign-in.</div>
+        <summary>How is Accounts organized?</summary>
+        <div class="ans">On Accounts you can switch Net worth, Cash, Cards, Portfolio, Property, and Loans. Layout sits next to Settings in the top bar. Search and + are on the right.</div>
       </details>
       <details>
-        <summary>Can I add a manual account or a property account?</summary>
-        <div class="ans">Not in the current app. Accounts come from a bank link. You can add manual transactions on a cash account, but there is no separate manual-account or property-account screen yet.</div>
+        <summary>Can I track property and loans?</summary>
+        <div class="ans">Yes. Property shows items such as Car and Home. Loans shows items such as Mortgage. They sit in the Accounts list and in the iPad sidebar under Property and Loans.</div>
       </details>
       <details>
-        <summary>What does Treat as do?</summary>
-        <div class="ans">On each account row in Settings → Accounts, Treat as lets you override Automatic with Cash, Credit, or Investment when the bank’s label is wrong. That changes how Sprig groups the account on Banking vs Portfolio.</div>
+        <summary>What is Net worth?</summary>
+        <div class="ans">Net worth is the Accounts view that totals everything. It shows Your total, a chart (1M, 6M, YTD, 1Y, All), then Cash, Cards, and the rest of your groups.</div>
       </details>
       <details>
-        <summary>How do I rename a bank or account?</summary>
-        <div class="ans">In Settings → Accounts, tap the pencil next to the bank or account name, edit Name, then Save.</div>
-      </details>
-      <details>
-        <summary>What does Disconnect do?</summary>
-        <div class="ans">Disconnect stops syncing that bank and removes its accounts, transactions, and history from Sprig on this device.</div>
+        <summary>What is Balance vs Projected?</summary>
+        <div class="ans">On a cash account (and under Cash on Accounts), Balance is what the bank shows now. Projected looks ahead using upcoming items on the register.</div>
       </details>
     </div>
   </section>
@@ -102,23 +98,23 @@
     <div class="faq-list">
       <details>
         <summary>Can I enter my own transactions?</summary>
-        <div class="ans">Yes. Tap the green + on Banking (or + inside an account register) to open Add transaction. Pick a checking, savings, or card account, then enter the merchant, Expense or Income, amount, date, category, optional tags, and note.</div>
+        <div class="ans">Yes. Tap the green + on an account register. Manual entries use a pencil icon next to the date (for example Lunch with Dan). Pending bank items use an hourglass.</div>
       </details>
       <details>
         <summary>How does matching work?</summary>
-        <div class="ans">When you log a purchase by hand, Sprig keeps it until the bank posts the same spend. It matches on exact amount, a close date, and a similar merchant name, then reconciles them so nothing is counted twice.</div>
+        <div class="ans">The register has an Unmatched control next to Upcoming. Use it when a hand-entered spend still needs to line up with a bank download so nothing is counted twice.</div>
       </details>
       <details>
         <summary>How do scheduled transactions work?</summary>
-        <div class="ans">Open Settings → Recurring. Add rent, payroll, or a subscription with +, or adopt something under Found by Sprig. Scheduled items project forward on the register; you can pause, edit, or delete them there.</div>
+        <div class="ans">Upcoming on the register lists bills and paychecks ahead of Today, with categories and a running balance. That is where you see what is coming before it posts.</div>
       </details>
       <details>
-        <summary>Can I import transactions from a CSV?</summary>
-        <div class="ans">Yes. Settings → Import from CSV. Download the template if you need it, Choose CSV file, review the preview, then Confirm Import. Rows become manual transactions on the account you pick.</div>
+        <summary>How do I use Safe to Spend?</summary>
+        <div class="ans">Open a cash account such as Everyday Checking. Safe to Spend sits under Balance / Projected. Switch Projected to see the balance after upcoming bills on the list below.</div>
       </details>
       <details>
-        <summary>How do I change a category, merchant name, or tag?</summary>
-        <div class="ans">Open the transaction in its register. Categories, Merchants, and Tags are also managed under Settings so defaults and labels stay consistent across accounts.</div>
+        <summary>What do Select and Search do on a register?</summary>
+        <div class="ans">Select is in the register toolbar for multi-select. Search opens find on that account’s transactions.</div>
       </details>
     </div>
   </section>
@@ -127,24 +123,24 @@
     <h2 id="faq-budgets">Budgets</h2>
     <div class="faq-list">
       <details>
-        <summary>How does budgeting work in Sprig?</summary>
-        <div class="ans">There is no separate Budgets screen yet. Use Reports for income and spending by category, period, account, and tag. Use Safe to Spend and Set-asides on each cash account for what you can spend before the next paycheck.</div>
+        <summary>How does budgeting work?</summary>
+        <div class="ans">Open the Budget tab. My budget shows UNDER PLAN or over, spent of planned (for example $6,951 of $8,069), and a progress bar. Tap Edit plan to change the plan. Use Month or Year, and All accounts to filter.</div>
       </details>
       <details>
-        <summary>How do I use Safe to Spend?</summary>
-        <div class="ans">Open a cash account register. Safe to Spend is figured from your balance, pending and uncleared items, upcoming bills, and anything you Set aside. Tap How it’s figured for the line-by-line walk.</div>
+        <summary>How do categories work in Budget?</summary>
+        <div class="ans">Under Categories you see each line with spent of planned and On plan, under, or over. Switch Groups, or tap See all / Show less. Open a category for more detail.</div>
       </details>
       <details>
-        <summary>What are Set-asides?</summary>
-        <div class="ans">From the register, open Set-asides and Add set-aside (for example an emergency cushion). That lowers Safe to Spend. Your bank balance does not change.</div>
+        <summary>Can I see the year month by month?</summary>
+        <div class="ans">Yes. On My budget choose Year, then Year to date, Full year, or Last 12 months. Spent this year and By month show each month under or over plan.</div>
       </details>
       <details>
-        <summary>How are investments and net worth tracked?</summary>
-        <div class="ans">Brokerages show under Portfolio: Portfolio Value, day change, allocation, and holdings per account. Reports also shows a net worth card with Cash and Invested. Banking’s Total Balance is spendable cash accounts, not full net worth.</div>
+        <summary>What is Insights?</summary>
+        <div class="ans">Insights has Spending, Income, and Cash Flow. Cash flow is income minus spending, with a Summary for the period (for example Last month). Spending can show Category, Group, or Merchant, plus Spending mix and Top merchants.</div>
       </details>
       <details>
-        <summary>What does Reports show?</summary>
-        <div class="ans">Income, spending, spending by category, a monthly trend, top merchants, and net worth. Filter by period (This month, Last month, 3 months, 6 months, Year to date, All), category, tag, and account. Transfers between your own accounts are excluded unless you filter to them.</div>
+        <summary>How are investments tracked?</summary>
+        <div class="ans">Open Portfolio (Accounts chip or iPad sidebar). See value, History or Holdings, allocation (ETFs, mutual funds, cash, stocks), accounts, and largest holdings. Footer copy: Read-only. Sprig never trades or moves money.</div>
       </details>
     </div>
   </section>
@@ -153,44 +149,12 @@
     <h2 id="faq-settings">Settings</h2>
     <div class="faq-list">
       <details>
-        <summary>What does Theme do?</summary>
-        <div class="ans">Under Appearance, Theme switches System, Light, or Dark for the whole app.</div>
+        <summary>Where is Settings?</summary>
+        <div class="ans">Settings is a main tab on iPhone and iPad (gear in the top bar on Accounts screens too). The App Store screenshots do not show the Settings list itself, so individual options are held until we can read build 402.</div>
       </details>
       <details>
-        <summary>What is Accounts in Settings?</summary>
-        <div class="ans">The list of linked banks. Add an account, rename, Treat as, or Disconnect from here.</div>
-      </details>
-      <details>
-        <summary>What is Recurring?</summary>
-        <div class="ans">Your Scheduled bills and paychecks, plus Found by Sprig suggestions you can Add, Edit, or Dismiss.</div>
-      </details>
-      <details>
-        <summary>What are Merchants?</summary>
-        <div class="ans">Saved merchant names and their default categories, so Add transaction and bank rows categorize faster.</div>
-      </details>
-      <details>
-        <summary>What are Categories?</summary>
-        <div class="ans">Built-in groups and subcategories (Income is separate). Expand a group to browse them, or add a custom subcategory with +.</div>
-      </details>
-      <details>
-        <summary>What are Tags?</summary>
-        <div class="ans">Optional labels you attach to transactions. They also appear as a filter on Reports once you have any.</div>
-      </details>
-      <details>
-        <summary>What is Import from CSV?</summary>
-        <div class="ans">Brings rows from a spreadsheet into an account as manual transactions after a preview and Confirm Import.</div>
-      </details>
-      <details>
-        <summary>What is Low balance warning?</summary>
-        <div class="ans">Under Alerts, turn it on and pick a Below amount ($100–$5,000). Sprig warns when a forecast dips under that line.</div>
-      </details>
-      <details>
-        <summary>What does Replay tour do?</summary>
-        <div class="ans">Under About, it runs the first-run tour again over the main screens.</div>
-      </details>
-      <details>
-        <summary>How do I delete my Sprig account?</summary>
-        <div class="ans">Settings → Delete Sprig account. That removes bank connections and your data on this device and cannot be undone.</div>
+        <summary>What is Layout?</summary>
+        <div class="ans">Layout sits next to the gear on Accounts. Use it when you want to rearrange how Accounts is presented.</div>
       </details>
     </div>
   </section>
@@ -199,20 +163,16 @@
     <h2 id="faq-privacy">Privacy</h2>
     <div class="faq-list">
       <details>
+        <summary>Can Sprig move my money?</summary>
+        <div class="ans">No. Portfolio states Read-only. Sprig never trades or moves money. Bank links are for viewing only.</div>
+      </details>
+      <details>
         <summary>Where is my data stored?</summary>
-        <div class="ans">On your device. Sprig never stores your financial data on its servers. Settings repeats that line at the bottom of the screen.</div>
-      </details>
-      <details>
-        <summary>Are bank links read-only?</summary>
-        <div class="ans">Yes. Onboarding requires you to acknowledge read-only access before you continue. Sprig cannot move money.</div>
-      </details>
-      <details>
-        <summary>How does sync across iPhone, iPad, and Mac work?</summary>
-        <div class="ans">Each device keeps its own local copy today. There is no in-app iCloud data sync and no Mac build in the current app. Use the same Apple ID subscription on iPhone and iPad; reconnect banks on a new device after install.</div>
+        <div class="ans">See the <a href="/privacy">Privacy Policy</a>. The site states financial data stays on your Apple devices and in your own iCloud — that wording is from the policy pages, not from an in-app Settings label in the screenshots.</div>
       </details>
       <details>
         <summary>Where are Privacy Policy and Terms?</summary>
-        <div class="ans">Settings → About links to Privacy Policy and Terms of Service on heysprig.com. They are also in the site footer.</div>
+        <div class="ans">In the site footer, and linked from <a href="/privacy">Privacy</a> and <a href="/terms">Terms</a>.</div>
       </details>
     </div>
   </section>
