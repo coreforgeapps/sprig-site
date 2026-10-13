@@ -19,7 +19,11 @@
 .card.me h3{color:var(--green)}
 .card dl{margin:0;display:grid;gap:2px}
 .card dt{color:var(--mute);font-size:12px;margin-top:10px}
-.card dd{margin:0;font-size:14.5px;font-weight:600;color:var(--text)}
+.card dd{margin:0;font-size:14.5px;font-weight:600;color:var(--ink)}
+.hero-center{text-align:left}
+.hero-center h1{max-width:16ch;margin:0}
+.hero-center .sub{margin:14px 0 0;max-width:48ch}
+.pill-row{justify-content:flex-start}
 @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.cards{grid-template-columns:1fr}}
 </style>
@@ -71,7 +75,6 @@
 
 <main class="wrap">
   <section class="section tight" id="compare">
-    <div class="kicker">Price</div>
     <h2>Lower than Copilot, Monarch and YNAB</h2>
     <div class="cards">
       <div class="card me">
@@ -113,7 +116,6 @@
   </section>
 
   <section class="section tight" id="offer">
-    <div class="kicker">Offer</div>
     <h2>Get your first-year code</h2>
     <p class="lead">Show an active subscription in another app. Get a one-time App Store offer code for $49.99 your first year.</p>
     <div class="split">
