@@ -1,0 +1,21 @@
+# heysprig.com
+User-agent: *
+Allow: /
+
+# Search and AI answer crawlers are welcome
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://heysprig.com/sitemap.xml
