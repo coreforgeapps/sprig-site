@@ -5,12 +5,26 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type="image/png" href="/favicon.png" />
-<title>Sprig: Money &amp; Budget — every account, one clear view</title>
-<meta name="description" content="Every bank, card and investment account in one clear view, with a running balance after every transaction. We don't keep your financial transactions on our servers. iPhone &amp; iPad. Coming soon: Mac &amp; Web." />
+<title>Sprig Finance: Money &amp; Budget | Your accounts in one clear view</title>
+<meta name="description" content="Your bank, card and investment accounts in one clear view, with a running balance after every transaction. Budgets, Safe to Spend and net worth for iPhone, iPad and Mac." />
+<link rel="canonical" href="https://heysprig.com/" />
+<meta name="apple-itunes-app" content="app-id=6784408208" />
+<meta property="og:title" content="Sprig Finance: Money &amp; Budget" />
+<meta property="og:description" content="Your accounts, investments and budgets in one simple view. For iPhone, iPad and Mac." />
+<meta property="og:url" content="https://heysprig.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://heysprig.com/video/sprig-promo-poster.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/css/site.css?v=20261013b" />
+<style>
+.price-block{margin-top:24px;max-width:34rem;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink)}
+.price-main{margin:0;font-family:var(--display);font-size:clamp(2rem,5vw,2.8rem);font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.price-main span{display:block;font-size:1rem;font-weight:600;letter-spacing:0;margin-top:4px}
+.price-regular{margin:12px 0 0;font-weight:600}
+.price-block .fine{margin-top:12px}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -24,11 +38,10 @@
     <div class="topbar-right">
       <nav class="nav" aria-label="Primary">
         <a href="/" aria-current="page">Home</a>
-        <a href="/switch">Switch</a>
         <a href="/faq">FAQ</a>
         <a href="/contact">Contact</a>
       </nav>
-      <a class="btn primary btn-nav" id="nav-cta" href="#testdrive">Test drive free</a>
+      <a class="btn primary btn-nav" id="nav-cta" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208" target="_blank" rel="noopener">Download Sprig on the App Store</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -37,11 +50,10 @@
 </header>
 <div class="nav-panel" id="nav-panel">
   <a href="/" aria-current="page">Home</a>
-  <a href="/switch">Switch</a>
   <a href="/faq">FAQ</a>
   <a href="/contact">Contact</a>
-  <a class="btn primary" id="nav-cta-panel" href="#testdrive">Test drive free</a>
-  <a class="btn ghost" id="nav-download-panel" href="#gallery">Download on the App Store</a>
+  <a class="btn primary" id="nav-download-panel" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208" target="_blank" rel="noopener">Download on the App Store</a>
+        <a class="btn ghost" id="nav-download-panel-mac" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208?platform=mac" target="_blank" rel="noopener">Download for Mac</a>
 </div>
 
 <!-- Growth ledger hero: stem motif + rising register, not a centered dark SaaS hero -->
@@ -66,15 +78,14 @@
   <div class="wrap grow-hero-grid">
     <div class="grow-copy">
       <h1 class="grow-brand">Sprig</h1>
-      <p class="grow-line">Every account.<br>One clear view.</p>
-      <p class="lead">Banks, cards, investments and property on one register — with net worth up top and a running balance after every transaction.</p>
+      <p class="grow-line">Your accounts.<br>One clear view.</p>
+      <p class="lead">Banks, cards, investments and property on one register, with net worth up top and a running balance after every transaction.</p>
       <div class="hero-actions">
-        <a class="btn primary" id="cta-link" href="#testdrive">Test drive free</a>
-        <a class="btn ghost" id="cta-download" href="#gallery">Download on the App Store</a>
+        <a class="btn primary" id="cta-download" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208" target="_blank" rel="noopener">Download on the App Store</a>
+        <a class="btn ghost" id="cta-download-mac" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208?platform=mac" target="_blank" rel="noopener">Download for Mac</a>
       </div>
-      <p class="hero-meta-switch"><a href="/switch">Switching from another app?</a></p>
-      <p class="hero-meta">No ads. We don’t sell your data. Your accounts sync through your own iCloud.
-        <span class="plat">iPhone &amp; iPad. Coming soon: Mac &amp; Web.</span>
+      <p class="hero-meta">No ads. We don’t sell your data. Bank links are read-only. No one can move your money through Sprig.
+        <span class="plat">For iPhone, iPad and Mac.</span>
       </p>
     </div>
 
@@ -129,7 +140,7 @@
   <section class="ledger" id="accounts">
     <div class="wrap ledger-head reveal">
       <h2>Net worth on top. Everything underneath.</h2>
-      <p class="lead">Checking, savings, cards, investments and property side by side — the whole picture without jumping apps.</p>
+      <p class="lead">Checking, savings, cards, investments and property side by side, so your financial picture lives in one app.</p>
     </div>
     <div class="ledger-device reveal">
       <img class="shot ipad" src="/screenshots/ipad/1.png" alt="Sprig accounts and net worth on iPad" loading="lazy">
@@ -140,7 +151,7 @@
     <div class="wrap frond-grid">
       <div class="frond-copy reveal">
         <h2>A balance that grows with every line.</h2>
-        <p class="lead">A running balance after every transaction, the way a register works. Clean merchant names. No guesswork.</p>
+        <p class="lead">A running balance after every transaction, the way a register works. Clean payee names. No guesswork.</p>
       </div>
       <div class="frond-visual reveal frond-pair">
         <svg class="frond-mark" viewBox="0 0 120 200" aria-hidden="true">
@@ -214,91 +225,41 @@
     <div class="wrap soil-grid reveal">
       <div>
         <h2>Private by design.</h2>
-        <p class="lead">We don’t keep your financial transactions on our servers. They’re stored on your Apple devices and in your own iCloud. Optional Face ID lock. Bank links are read-only.</p>
+        <p class="lead">We don’t keep your financial transactions on our servers. They’re stored on your Apple devices and in your own iCloud. Optional Face ID lock. Bank links are read-only. No one can move your money through Sprig.</p>
       </div>
       <img class="shot phone" src="/screenshots/iphone/1.png" alt="Sprig accounts on your Apple devices" loading="lazy">
     </div>
   </section>
 
-  <section class="testdrive-band" id="testdrive">
+  <section class="testdrive-band" id="start">
     <div class="wrap reveal">
-      <h2>Start free. Subscribe when you connect your banks.</h2>
-      <p class="lead">Download Sprig and use it with manual accounts — no subscription required until you tap Connect a bank.</p>
+      <h2>Track by hand for free. Subscribe to connect your banks.</h2>
+      <p class="lead">Download Sprig and use it with manual accounts. A subscription is needed only when you tap Connect a bank.</p>
       <ul class="testdrive-list">
-        <li><strong>Free without paying:</strong> Manual accounts and transactions, the running-balance register, Safe to Spend and projections, Insights, Budget, and Recurring schedules.</li>
-        <li><strong>Subscribe to connect banks:</strong> Linking a live bank through Plaid opens a dismissible paywall. You can choose Add a manual account instead and keep going.</li>
+        <li><strong>Without a subscription:</strong> Manual accounts and transactions, the running balance register, Safe to Spend and projections, Insights, Budget, and Recurring schedules.</li>
+        <li><strong>With a subscription:</strong> Connect your banks, cards and brokerages. Bank links are read-only. No one can move your money through Sprig.</li>
       </ul>
-      <div class="hero-actions" style="margin-top:28px">
-        <a class="btn primary" id="cta-testdrive" href="#gallery">Test drive free</a>
-        <a class="btn ghost" id="cta-download-2" href="#gallery">Download on the App Store</a>
-      </div>
     </div>
   </section>
 
-  <section class="price-band" id="compare">
+  <section class="price-band" id="price">
     <div class="wrap reveal">
-      <h2>More affordable than Copilot, Monarch and YNAB.</h2>
-      <div class="compare-scroll" role="region" aria-label="Price and privacy comparison" tabindex="0">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col"><span class="sr-only">Feature</span></th>
-              <th scope="col" class="col-sprig">Sprig <span class="badge-free">Free test drive</span></th>
-              <th scope="col">Copilot</th>
-              <th scope="col">Monarch</th>
-              <th scope="col">YNAB</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Price per year</th>
-              <td class="col-sprig"><strong>$49.99 first year, then $79.99/yr</strong></td>
-              <td>$95/yr</td>
-              <td>$99.99/yr</td>
-              <td>$109/yr</td>
-            </tr>
-            <tr>
-              <th scope="row">Where your transactions are kept</th>
-              <td class="col-sprig">Your Apple devices and your own iCloud, not our servers</td>
-              <td>Stored on their systems</td>
-              <td>Stored on their systems</td>
-              <td>Stored on their systems</td>
-            </tr>
-            <tr>
-              <th scope="row">Ads and data sales</th>
-              <td class="col-sprig">No ads. We don’t sell your data.</td>
-              <td class="dash" aria-label="Not compared">—</td>
-              <td class="dash" aria-label="Not compared">—</td>
-              <td class="dash" aria-label="Not compared">—</td>
-            </tr>
-            <tr>
-              <th scope="row">Bank links</th>
-              <td class="col-sprig">Bank links are read-only. Sprig can only read your accounts. It can't move money.</td>
-              <td class="dash" aria-label="Not compared">—</td>
-              <td class="dash" aria-label="Not compared">—</td>
-              <td class="dash" aria-label="Not compared">—</td>
-            </tr>
-            <tr>
-              <th scope="row">Platforms</th>
-              <td class="col-sprig">iPhone &amp; iPad. Coming soon: Mac &amp; Web.</td>
-              <td class="dash" aria-label="Not compared">—</td>
-              <td class="dash" aria-label="Not compared">—</td>
-              <td class="dash" aria-label="Not compared">—</td>
-            </tr>
-          </tbody>
-        </table>
+      <h2>One simple price.</h2>
+      <div class="price-block">
+        <p class="price-main">$49.99<span>limited time price</span></p>
+        <p class="price-regular">$79.99/yr regular</p>
       </div>
       <div class="hero-actions" style="margin-top:28px">
-        <a class="btn primary" href="#gallery">Download on the App Store</a>
+        <a class="btn primary" id="cta-download-2" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208" target="_blank" rel="noopener">Download on the App Store</a>
+        <a class="btn ghost" id="cta-download-2-mac" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208?platform=mac" target="_blank" rel="noopener">Download for Mac</a>
       </div>
-      <p class="fine">Competitor prices and data storage per each company’s published website and privacy policy, checked October 13, 2026. Sprig is not affiliated with Copilot, Monarch, YNAB, Rocket Money, Simplifi or Quicken. All trademarks belong to their owners.</p>
     </div>
   </section>
 
   <section class="gallery-band" id="gallery">
     <div class="wrap">
       <div class="reveal">
-        <h2>iPhone and iPad</h2>
+        <h2>iPhone, iPad and Mac</h2>
       </div>
       <div class="tabs" id="tabs" role="tablist" aria-label="Device screenshots"></div>
       <div class="shot-row" id="row"></div>
@@ -308,12 +269,12 @@
 
 <section class="closing">
   <div class="wrap">
-    <h2>Every account. $49.99 your first year.</h2>
-    <p class="lead">Then $79.99/year. We don't keep your financial transactions on our servers. They're stored on your Apple devices and in your own iCloud.</p>
-    <p class="fine">iPhone &amp; iPad. Coming soon: Mac &amp; Web.</p>
+    <h2>Your financial picture, in one app.</h2>
+    <p class="lead">$49.99 limited time price. $79.99/yr regular.</p>
+    <p class="fine">For iPhone, iPad and Mac.</p>
     <div class="hero-actions">
-      <a class="btn primary" id="cta2" href="#testdrive">Test drive free</a>
-      <a class="btn ghost" id="cta2-download" href="#gallery">Download on the App Store</a>
+      <a class="btn primary" id="cta2-download" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208" target="_blank" rel="noopener">Download on the App Store</a>
+        <a class="btn ghost" id="cta2-download-mac" href="https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208?platform=mac" target="_blank" rel="noopener">Download for Mac</a>
     </div>
   </div>
 </section>
@@ -322,17 +283,15 @@
   <a href="/privacy">Privacy Policy</a>
   <a href="/terms">Terms of Service</a>
   <a href="/data-retention">Data Retention Policy</a>
-  <a href="/switch">Switch</a>
   <a href="/contact">Contact</a>
-  <span>© 2026 CoreForge</span>
+  <span>© 2026 CoreForge LLC</span>
 </footer>
 
 <script>
-var APP_STORE_URL = "";
+var APP_STORE_URL = "https://apps.apple.com/us/app/sprig-finance-money-budget/id6784408208";
 var SHOTS = {
   iPhone:{dir:"/screenshots/iphone/",cls:"iphone",files:["1.png","2.png","4.png","5.png","6.png","7.png","8.png","9.png"],alt:"Sprig on iPhone"},
-  iPad:{dir:"/screenshots/ipad/",cls:"ipad",files:["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],alt:"Sprig on iPad"},
-  Mac:{dir:"/screenshots/mac/",cls:"mac",files:[],alt:"Sprig on Mac"}
+  iPad:{dir:"/screenshots/ipad/",cls:"ipad",files:["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png"],alt:"Sprig on iPad"}
 };
 (function(){
   var names=Object.keys(SHOTS).filter(function(k){return SHOTS[k].files.length});
@@ -362,16 +321,9 @@ var SHOTS = {
   if(names.length) show(names[0]);
 })();
 if(APP_STORE_URL){
-  ["cta-download","cta-download-2","cta2-download","nav-download-panel"].forEach(function(id){
+  ["nav-cta","nav-download-panel","cta-download","cta-download-2","cta2-download"].forEach(function(id){
     var l=document.getElementById(id);
-    if(!l) return;
-    l.href=APP_STORE_URL;
-    l.textContent="Download on the App Store";
-  });
-  ["cta-testdrive","cta-link","cta2","nav-cta","nav-cta-panel"].forEach(function(id){
-    var l=document.getElementById(id);
-    if(!l) return;
-    l.href=APP_STORE_URL;
+    if(l) l.href=APP_STORE_URL;
   });
 }
 (function(){
