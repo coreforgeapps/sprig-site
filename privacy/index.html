@@ -41,7 +41,7 @@
 </div>
 <main class="wrap prose" id="main">
 <h1>Privacy Policy</h1>
-    <p class="updated">Effective date: June 24, 2026  ·  Last updated: October 12, 2026</p>
+    <p class="updated">Effective date: June 24, 2026  ·  Last updated: November 20, 2026</p>
 
     <p>Sprig ("we," "us," or "our") is a personal finance application operated by CoreForge LLC. This Privacy Policy explains what information exists when you use Sprig, and the deliberate design choice behind it: your financial data lives on your own device and in your own iCloud account. Some information, listed in Section 2, passes through or is kept on our server. It applies to the Sprig iOS app and our website at heysprig.com.</p>
 
@@ -61,8 +61,9 @@
       <li><strong>Bank connection credential:</strong> when you link a bank, Plaid gives your device a credential that lets it retrieve your data. It is kept in your Keychain and syncs through your iCloud Keychain, as described in Section 1.</li>
       <li><strong>Notification token per bank connection:</strong> if you allow notifications, our server keeps the notification address Apple gives your device, filed under the bank connection it belongs to. It is used only to send a content-free "check for updates" signal, and it cannot be used to read anything. It is deleted when you disconnect the bank.</li>
       <li><strong>Random device identifier:</strong> a random value made on your device and stored in its Keychain. It is sent with requests so we can apply basic rate limits. It is not tied to your name, your bank, or any of your data.</li>
-      <li><strong>Subscription identifier (subscribers only):</strong> to know whether a subscription is active, our server checks Apple's records and keeps a scrambled, one-way hash of your Apple subscription number, plus whether the subscription is active. We do not keep the Apple number itself, and the hash cannot be turned back into it.</li>
+      <li><strong>Subscription identifier (subscribers only):</strong> to know whether a subscription is active, our server checks Apple's records and keeps a scrambled, one-way hash of your Apple subscription number, plus whether the subscription is active. Our server does not keep the Apple number itself, and the hash cannot be turned back into it. RevenueCat does receive it, inside the Apple purchase records described in the next item.</li>
       <li><strong>Plaid user ID:</strong> Plaid assigns your subscription an opaque user ID. Our server keeps it so your bank connections can be grouped and released by Plaid if your subscription ends. It does not contain your name or any personal detail.</li>
+      <li><strong>Information sent to RevenueCat:</strong> each time the app opens, whether or not you subscribe, it sends RevenueCat a random app user ID with no name or email attached, basic device and app details (Apple&#x27;s per-app device identifier, device model, iOS version, app version, preferred languages, App Store country, and the device&#x27;s tracking permission status, which for Sprig is always &quot;not asked&quot;), and the network address any server sees. Apple&#x27;s record of your app install and, when you subscribe or renew, your Apple purchase and subscription records also go to RevenueCat so we can track subscription status. Those records include your Apple subscription number. RevenueCat does not receive your name, email address, Apple Account email or password, or any bank, transaction, or budget data.</li>
       <li><strong>Transaction, balance, and holdings data:</strong> retrieved from your institution through Plaid and delivered to your device. This data passes through our server on its way to your device.</li>
       <li><strong>Data you enter on your device:</strong> manual transactions, memos, renamed merchants, categories, and other customizations are stored on your device and copied to your own iCloud account, as described in Section 1. None of it is stored on any server we operate.</li>
       <li><strong>Device name in your iCloud:</strong> the name of your device is saved in your own iCloud storage so the app can show which of your devices made a change. We cannot read your iCloud storage.</li>
@@ -77,9 +78,10 @@
       <li>Send a content-free "check for updates" notification when a bank has new activity or needs your attention</li>
       <li>Confirm whether your subscription is active, and release your bank connections with Plaid if it ends</li>
       <li>Manage your subscription through Apple's own billing system</li>
+      <li>Track subscription status and renewals through RevenueCat</li>
     </ul>
     <p>We do not sell, rent, or share your personal or financial data with any third party for advertising or marketing purposes.</p>
-    <p>Sprig contains no advertising, no analytics, and no crash-reporting tools, and it does not track you across other companies' apps or websites. The privacy details we give Apple for the App Store listing are Other Financial Info, User ID, Device ID and Purchase History, all used only for app functionality and never for tracking.</p>
+    <p>Sprig contains no advertising and no crash-reporting tools, and its only analytics are the subscription, device and app details sent to RevenueCat described in Section 2. It does not track you across other companies' apps or websites. The privacy details we give Apple for the App Store listing are Other Financial Info, User ID, Device ID and Purchase History. None of them is used for tracking.</p>
 
     <h2>4. Plaid and Financial Data</h2>
     <p>Sprig uses <a href="https://plaid.com" target="_blank" rel="noopener">Plaid Technologies, Inc.</a> to connect to your financial institutions. When you link an account, your bank credentials are entered directly with your bank through Plaid's interface. Sprig never sees or stores your banking username or password.</p>
@@ -92,6 +94,7 @@
     <h2>6. Data Retention and Deletion</h2>
     <p>Disconnecting a bank deletes its notification address from our server. When you disconnect a linked institution or delete your data from within the app, we also tell Plaid to release that connection, which stops any further access to that account.</p>
     <p><strong>Deleting the app does not delete everything.</strong> It removes the copy on your device. It does not remove the copy in your own iCloud account, since that copy is under your Apple Account, not ours, and only you can remove it. To remove all of your Sprig data, delete the app from your device, then open Settings, tap your name, tap iCloud, then Manage Account Storage, find Sprig in the list, and delete its data there. Full detail is available in our <a href="/data-retention">Data Retention and Disposal Policy</a>.</p>
+    <p>Deleting the app or your data does not remove the records RevenueCat holds. To have them deleted, <a href="/contact">contact us through our contact page</a>.</p>
 
     <h2>7. Third-Party Services</h2>
     <p>Sprig relies on the following service providers to operate:</p>
@@ -99,6 +102,7 @@
       <li><strong>Plaid Technologies, Inc.</strong>: connection to your financial institutions</li>
       <li><strong>Cloudflare, Inc.</strong>: hosts the server described in Section 5, which retrieves your data from Plaid on request</li>
       <li><strong>Apple Inc.</strong>: subscription billing, iCloud Keychain syncing of your bank connection credential between your devices, delivery of a content-free notification signal, and storage of the copy held in your own iCloud account as described in Section 1</li>
+      <li><strong>RevenueCat, Inc.</strong>: subscription management and subscription analytics, using the information described in Section 2</li>
     </ul>
     <p>Each provider is bound by its own privacy policy and data processing terms. We do not sell your data to any of them.</p>
 
